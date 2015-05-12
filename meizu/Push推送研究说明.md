@@ -160,7 +160,10 @@ PushManager.getInstance().initialize(this.getApplicationContext());
   
 ### 三.集成说明
 #### 3.1资源集成
+
 > **Note:** [具体详见百度云推送SDK开发文档](http://push.baidu.com/doc/android/api)
+
+
 #### 3.2 AndroidManifest.xm配置
 ##### 3.2.1 权限声明
 ```
@@ -253,7 +256,10 @@ PushManager.startWork(getApplicationContext(),PushConstants.LOGIN_TYPE_API_KEY,"
 ![enter image description here](http://docs.jpush.io/client/image/jpush_android.png)
 ### 三.集成说明
 #### 3.1资源集成
+
 > **Note:**  [具体详见极光推送SDK包说明](http://docs.jpush.io/guideline/android_guide/)
+
+
 #### 3.2 AndroidManifest.xm配置
 ##### 3.2.1 权限声明
 ```
