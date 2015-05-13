@@ -365,12 +365,99 @@ public static void setDebugMode(boolean debugEnalbed)
 ```
 ## Flyme云推送
 ### 一.主要功能及特点
+  app为了及时获取到服务器端的消息更新，一般会采用轮寻或者推送的方式来获取消息更新，轮寻导致终端设备流量、电量、等系统资源严重浪费，所以目前采用的比较广泛的是推送的方式，目前 Meizu 的 Push SDK 不能脱离 Flyme OS 存在，当该 SDK 脱离 Flyme OS 之后由于没有长链接导致不能正常收到推送消息。本 SDK 首先要解决的时长链接由 SDK 自己维护，同时还要解决的就是多个 app 引用同一个 SDK 时长链接的复用问题。
 ### 二.Android SDK推送框架
+该 SDK 以 Android Service 方式运行，独占一个进程，该 Service 自己维护与推送服务器的长链接。如果一款手机安装了多个集成了 SDK 的手机应用，则只有一个 service 实例运行，不会每个应用都会开启一个后台 service，而是采用多个应用共享一个Push通道的方式，这就解决了长链接复用的问题，节省了对流量、电量的浪费。使用该 SDK 只需要关心 MzPushManager 提供的API，与 MzPushMessageReceiver 提供的回调接口以及相应的配置即可。
 ### 三.集成说明
 #### 3.1资源集成
+集成前准备工作
+  PushSDk 提供一个Jar包以及两个.so文件，目录结构如下
+
+```
+	--libs
+	  --armeabi
+	  ---libcrypto_framwork.so
+	  ---libsnappy-jni.so
+	  --pushsdk-all-V1.0.jar
+```
 #### 3.2 AndroidManifest.xm配置
 ##### 3.2.1 权限声明
+```xml
+<!-- Push service 运行需要的权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+```
 ##### 3.2.2 服务项配置 
-#### 3.3 项目代码初始化
+* (1)AndroidManifest.xml注册消息接收receiver
 
+```xml
+        <!-- push应用定义消息receiver声明 -->
+        <receiver android:name="your.package.MyPushMsgReceiver">
+            <intent-filter>
+                <!-- 接收push消息 -->
+                <action android:name="com.meizu.cloud.pushservice.action.ON_MESSAGE" />
+            </intent-filter>
+        </receiver>
+```
+
+* (2)客户端需要自己实现MyPushMessageReceiver，接收Push服务的消息，并实现对消息的处理
+MyPushMessageReceiver如下代码所示，继承com.meizu.cloud.pushsdk.MzPushMessageReceiver
+
+```java
+    public class MyPushMsgReceiver extends MzPushMessageReceiver {
+    @Override
+    public void onRegister(Context context, String s) {
+
+    }
+
+    @Override
+    public void onMessage(Context context, String s) {
+
+    }
+}
+```
+* (3)AndroidManifest.xml增加pushservice配置
+```xml
+        <service
+            android:name="com.meizu.cloud.pushsdk.pushservice.MzPushService"
+            android:exported="true"
+            android:process="com.meizu.cloud.pushservice" >
+            <intent-filter >
+                <action android:name="com.meizu.cloud.pushservice.action.PUSH_SERVICE"/>
+            </intent-filter>
+        </service>
+        
+        用于接收系统消息，保证pushservice正常运行
+        <receiver android:name="com.meizu.cloud.pushsdk.PushServiceReceiver"
+                  android:process="com.meizu.cloud.pushservice">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.meizu.cloud.pushsdk.pushservice.PushBroadcastProcessorService"
+            android:exported="true"/>
+```
+#### 3.3 项目代码初始化
+* 在自定义Application的onCreate方法中调用Push绑定接口
+  
+```java
+   PushManager.register(Context context)
+```
 
