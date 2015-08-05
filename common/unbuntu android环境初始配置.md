@@ -72,3 +72,6 @@ net use z: \\vboxsvr\共享的目录名  这里就是share
 其实方法简单，只需要在设置->网络这个选项卡中的连接方式中选择“桥接网卡”，混杂模式选择“允许虚拟电脑”
 这样Vmware虚拟机就会重新获取局域网ip，作为一个独立的主机了
 [具体问题详见此](http://zhidao.baidu.com/link?url=Em-j_y9WCHw306GLsxrU22hr_sq3FIHt7CPRFPvMfrxMH5vSmJO9Oz1NLNt2rVlCOR16OOFfL9yqB0RG_LKBoa)
+
+* windows 远程登录Ubuntu[http://jingyan.baidu.com/article/a501d80cf71bc3ec630f5e0c.html]
+
