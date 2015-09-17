@@ -1,6 +1,6 @@
-### Spring Mvc
+# Spring Mvc
 
-* J2EE描述部署文件web.xml
+## 1.J2EE描述部署文件web.xml
 
 * [Spring MVC 配置详解](http://www.cnblogs.com/superjt/p/3309255.html)
 * [SpringMVC关于json、xml自动转换的原理研究[附带源码分析]](http://www.cnblogs.com/fangjian0423/p/springMVC-xml-json-convert.html)
@@ -33,3 +33,25 @@ userId='null', passwd='null', code=200, message='null', result=ApiResult{id='269
 
 
 * [springmvc整合redis架构搭建实例](http://www.cnblogs.com/dennisit/p/3614521.html?utm_source=tuicool)
+
+
+
+# thinkPhp
+## 1 语言说明
+## 2 开发工具
+## 3 开源项目
+    [thinkPhp](http://doc.thinkphp.cn/manual/basic_concept.html)->[OneThink](http://www.onethink.cn/)->[OCenter](http://www.ocenter.cn/index.php?m=book&f=browse&nodeID=1)
+     前端路线
+    [html](http://www.w3cschool.cn)->[javaScript]()
+
+
+    [thinkSNS]
+     安装错误说明：
+环境：   wampserver-2.1a    
+系统 ：  win8
+错误 ：  500 -Invalid command RewriteEngine
+日志 ： [Tue Nov 20 22:52:24 2012] [alert] [client 127.0.0.1] D:/wamp/www/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
+解决 ： RewriteEngine命令需要rewrite mod的支持，
+       打开apache的配置文件httpd.conf ，取消 LoadModule rewrite_module modules/mod_rewrite.so前的注释
+
+
