@@ -10,3 +10,5 @@ These Rx operators allow you to compose asynchronous sequences together in a dec
 
 # [RxJava AsyncTask的替代方案分析](http://stablekernel.com/blog/replace-asynctask-asynctaskloader-rx-observable-rxjava-android-patterns/)
   本文在列举了在工作遇到的多任务并行处理时所遇到的问题，进而分析RxJava在此类问题应用中的优势
+
+# [RxJava 操作符动态效果图](http://rxmarbles.com/#map)

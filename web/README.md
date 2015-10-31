@@ -47,11 +47,30 @@ userId='null', passwd='null', code=200, message='null', result=ApiResult{id='269
 
     [thinkSNS]
      安装错误说明：
-环境：   wampserver-2.1a    
+环境：   wampserver-2.1a
 系统 ：  win8
 错误 ：  500 -Invalid command RewriteEngine
 日志 ： [Tue Nov 20 22:52:24 2012] [alert] [client 127.0.0.1] D:/wamp/www/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration
 解决 ： RewriteEngine命令需要rewrite mod的支持，
        打开apache的配置文件httpd.conf ，取消 LoadModule rewrite_module modules/mod_rewrite.so前的注释
+
+     [模块加载机制]
+     [插件机制]
+
+[前端技术]
+ * javaScript 
+      C 中的块级作用域
+      自执行匿名函数
+ * [深入理解javaScript](http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html)
+
+ * [php]()
+    thinkphp 使用，thinksns
+ * [html]()
+   前端模版技术
+   前端框架：jsp，php模版引擎
+
+  * 页面渲染与接口分离
+
+      
 
 
