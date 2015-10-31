@@ -1,7 +1,26 @@
 # 概览
 本项目旨在分析现在成熟的开发技术，包括做一个应用系统所需要的各方面知识的汇总，虽然每一个技术并没有进行深入的技术分析，但是足以让你了解你自己的所喜欢的技术领域；当然最重要的是分享我在开发过程中遇到的各种技术问题，本文旨在理清各个技术领域的之前的相互共性，更为重要的是提供一种学习的路径和方向；在下面的说明中，我会给出一些个人认为比较流行且可用以商业的开源项目，针对项目做具体的说明；当然也会包括我个人的一些项目以及在公司中所见到的技术方案。
 
+# Web开发说明
+## 1 关于web技术的一些博客站点
+* [1.前后端分离的思考与实践系列文章](http://ued.taobao.org/blog/2014/04/full-stack-development-with-nodejs/) 
+* [2.Web开发演进方向—Web 研发模式演变](https://github.com/lifesinger/lifesinger.github.io/issues/184)
+这篇文章说明web开发发展进程中，全后端分离实现所作的探究，不断得再探索一种高校的开发模式
+* [淘宝核心技术团队博客](http://csrd.aliapp.com/?page_id=2)
+说明当前淘宝核心技术团队正在研发的基础服务，大部分已经开源
+* [阿里 开源项目](https://github.com/alibaba?utf8=%E2%9C%93&query=cobar)
+  主要包括web服务中各个领域的开源项目，涵盖数据库，中间件
+* [前阿里架构师的收藏夹](http://afoo.me/favorite.html#%E6%94%B6%E8%97%8F%E5%A4%B9)
+* [业务系统扩展-阿里中间件技术解密](http://wenku.baidu.com/link?url=A1s1yXfgtNJLnZ8K-nKBEyw49L3ZKlO9UUWkEDcdQJ3ER4XWQE2KL-13hS5eIYzIjq1lVoms3B--y-PnVCghU6ozdOBIsrZdl3vb5llsMoS) 
 
+
+### 分布式系统框架
+* [Dubbo-阿里巴巴SOA服务化治理方案的核心框架](http://dubbo.io/Home-zh.htm)
+* [消息中间件MetaQ](https://github.com/killme2008/Metamorphosis)
+* [魅族服务化框架kiev]()
+* [为监控而生的数据库连接池](https://github.com/alibaba/druid)
+* [基于MySQL的分布式数据库服务中间件](https://github.com/alibaba/cobar)
+* [基于iBatis和Spring的轻量级分布式数据访问框架(DDAL) ](https://github.com/alibaba/cobarclient)
 
 #一. J2EE项目开发说明
 ##1. web容器配置
