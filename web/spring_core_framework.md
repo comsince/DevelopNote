@@ -271,10 +271,7 @@ protected String adminPath;
 ```
 
 #### 3.4.3 为自动检测标注Bean
-```
-注意：
 
-```
 >**NOTE：```<context:component-scan>```  元素会扫描指定的包及其所有的子包，并能找出能够自动注册为Spring Bean 的类**
 > The use of``` <context:component-scan>``` implicitly enables the functionality of ```<context:annotation-config>```. There is usually no need to include the ```<context:annotation-config>``` element when using``` <context:component-scan>```.
 
