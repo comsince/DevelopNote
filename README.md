@@ -1,6 +1,8 @@
 ## 说明
 * [MarkDown 编辑器，推荐使用StackEdit](https://stackedit.io/editor)
 
+* 这个文档作为知识库的首要说明，主要记录开发经验积累，后续也会加上对一些具体案例的分析说明，加深对某一技术的理解
+
 ## 通用Android技能说明
 * [Fastboot 刷机教程](./common/FastBoot.md)
 * [Android  常见问题解析](./common/AndroidStudioSUseProblem.md)
@@ -10,6 +12,8 @@
 ## 常用知识库
 * [Android 相关文档](./common)
 
+## Push推送设计说明
+* 主要介绍设计一个push客户端应用应该考虑到的那些问题，进行汇总说明
 
 ## 云服务分享计划
 * [pushSDK推送的对比分析报告]()
