@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Developnote by comsince</title>
+    <meta name="description" content="Developnote : 对Android开放过程遇到的问题进行总结，分享一下开放过程中好的问题解决方案，以及在应用开发的新的思想">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Developnote</title>
   </head>
 
   <body>
-    <div id="container">
-      <div class="inner">
 
-        <header>
-          <h1>Developnote</h1>
-          <h2>对Android开放过程遇到的问题进行总结，分享一下开放过程中好的问题解决方案，以及在应用开发的新的思想</h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/comsince/DevelopNote">View on GitHub</a>
+
+          <h1 id="project_title">Developnote</h1>
+          <h2 id="project_tagline">对Android开放过程遇到的问题进行总结，分享一下开放过程中好的问题解决方案，以及在应用开发的新的思想</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/comsince/DevelopNote/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/comsince/DevelopNote/tarball/master">Download this project as a tar.gz file</a>
+            </section>
         </header>
+    </div>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/comsince/DevelopNote/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/comsince/DevelopNote/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/comsince/DevelopNote" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <ul>
+<li><a href="https://stackedit.io/editor">MarkDown 编辑器，推荐使用StackEdit</a></li>
+</ul>
 
-        <hr>
-
-        <section id="main_content">
-          <h2>
-<a id="说明" class="anchor" href="#%E8%AF%B4%E6%98%8E" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>说明</h2>
+<h1>
+<a id="概述" class="anchor" href="#%E6%A6%82%E8%BF%B0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>概述</h1>
 
 <ul>
-<li><p><a href="https://stackedit.io/editor">MarkDown 编辑器，推荐使用StackEdit</a></p></li>
-<li><p>这个文档作为知识库的首要说明，主要记录开发经验积累，后续也会加上对一些具体案例的分析说明，加深对某一技术的理解
-这种模式应该成为一种学习的方式，遇到一个问题，对问题进行分类，类型维基百科的方法对改词条进行有效分类整理，并写出文档，形成一种知识的积累</p></li>
+<li><p>这个文档作为知识库的首要说明，主要记录开发经验积累，后续也会加上对一些具体案例的分析说明，加深对某一技术的理解这种模式应该成为一种学习的方式，遇到一个问题，对问题进行分类，类型维基百科的方法对改词条进行有效分类整理，并写出文档，形成一种知识的积累</p></li>
+<li><p>关于做分享的起因
+其实自己也是从后台逐步转向Android开发，自己也在不断的经验丰富中，在博客的最初起始阶段，大学期间也是自己在不断的坚持着写博客的习惯，但是工作中，逐步发现自己这个优秀的习惯并没有得到很好的延续，大概是因为自己懒的原因吧。其实在工作阶段是最容易积累知识的，在工作中遇到问题不断的解决问题，其实这个过程也就形成了一篇博客的原型。其实在不同公司面试时，也不经意间有人问你，你在工作中遇到的问题是什么，其实大多数人一下是想不起来的，因为问题的杂乱，一时半会，自己也不能给出一个很好的答案，这个时候，你的博客成功为工作生活中唯一的记录，只有它能见证自己的成长。
+写到这里，其实也是激励自己不断的进步，毕竟在成长中记录，有众多人一起分享和鼓励也会促进自己不断的进步，不止一次我感受到自己打到技术瓶颈时，看到别人的技术博客和经验总结，始终能使自己不断的前行，我想这也是我重新拾起大学期间的习惯吧。</p></li>
 </ul>
+
+<h1>
+<a id="一-android" class="anchor" href="#%E4%B8%80-android" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>一. Android</h1>
 
 <h2>
 <a id="通用android技能说明" class="anchor" href="#%E9%80%9A%E7%94%A8android%E6%8A%80%E8%83%BD%E8%AF%B4%E6%98%8E" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>通用Android技能说明</h2>
@@ -50,72 +58,43 @@
 </ul>
 
 <h2>
-<a id="常用知识库" class="anchor" href="#%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86%E5%BA%93" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>常用知识库</h2>
+<a id="网络相关" class="anchor" href="#%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>网络相关</h2>
+
+<h3>
+<a id="push推送研究" class="anchor" href="#push%E6%8E%A8%E9%80%81%E7%A0%94%E7%A9%B6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Push推送研究</h3>
 
 <ul>
-<li><a href="./common">Android 相关文档</a></li>
+<li>说明
+这里列举当前推送平台的发展趋势以及现有的平台提供的功能，之后会结合上述分析根据实际的经验分析目前我们所采用的push的实现方式</li>
+<li><a href="./meizu">第三方推送平台及SDK汇总分析</a></li>
 </ul>
+
+<h1>
+<a id="二-web" class="anchor" href="#%E4%BA%8C-web" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>二. Web</h1>
 
 <h2>
-<a id="push推送设计说明" class="anchor" href="#push%E6%8E%A8%E9%80%81%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Push推送设计说明</h2>
+<a id="概述-1" class="anchor" href="#%E6%A6%82%E8%BF%B0-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>概述</h2>
+
+<p>这里主要说明web开发的发展动向以及一些主流的开发框架</p>
 
 <ul>
-<li>主要介绍设计一个push客户端应用应该考虑到的那些问题，进行汇总说明</li>
+<li><a href="./web/spring_core_framework.md">分布式Web开发概述</a></li>
 </ul>
 
-<h2>
-<a id="云服务分享计划" class="anchor" href="#%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%88%86%E4%BA%AB%E8%AE%A1%E5%88%92" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>云服务分享计划</h2>
-
-<ul>
-<li>
-<p><a href="">pushSDK推送的对比分析报告</a></p>
-
-<p>此旨在研究市场上通用的push解决方法，通过对比研究pushSDK集成方法，使大家能够快速集成推送工具，实现自身的功能</p>
-</li>
-<li>
-<p><a href="">PushSDk单进程实现方法-魅族pushSDK实现原理</a></p>
-
-<p>主要是在单进程上实现单通道的设计原理，使多个app能够同时共享同一个连接，从而实现应用抱团启动，提高消息的送达率</p>
-</li>
-<li>
-<p><a href="">Volley支持大文件上传及下载以及进度展示的实现</a></p>
-
-<p>网络多媒体附件需要上传及下载功能，基于此需要对volley进行相应的扩展，使其支持大文件上传及下载以及进度回调</p>
-</li>
-<li>
-<p><a href="">数据库快速建表以及数据CRUD工具实现</a></p>
-
-<p>云服务需要自己维护相关数据，并且向第三方提供数据源，基于此需要一种灵活规范的数据建表模型已经快捷的数据CRUD的相关功能</p>
-</li>
-<li><a href="">融云即使通讯的实现原理</a></li>
-</ul>
-
-<h2>
-<a id="web开发分享计划" class="anchor" href="#web%E5%BC%80%E5%8F%91%E5%88%86%E4%BA%AB%E8%AE%A1%E5%88%92" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>web开发分享计划</h2>
-
-<ul>
-<li><a href="">Spring MVC 实现webapp</a></li>
-</ul>
-
-<h2>
-<a id="新技术改造计划" class="anchor" href="#%E6%96%B0%E6%8A%80%E6%9C%AF%E6%94%B9%E9%80%A0%E8%AE%A1%E5%88%92" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>新技术改造计划</h2>
-
-<ul>
-<li>
-<p><a href="">RxAndroid</a></p>
-
-<p>旨在通过基于事件的编程解决现有繁杂的逻辑</p>
-</li>
-</ul>
-        </section>
-
-        <footer>
-          Developnote is maintained by <a href="https://github.com/comsince">comsince</a><br>
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
+<h1>
+<a id="三-开源项目源码分析与扩展" class="anchor" href="#%E4%B8%89-%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%8E%E6%89%A9%E5%B1%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>三. 开源项目源码分析与扩展</h1>
+      </section>
     </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Developnote maintained by <a href="https://github.com/comsince">comsince</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
