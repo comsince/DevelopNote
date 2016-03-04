@@ -10,21 +10,21 @@
 
 
 # 一. Android
-## 通用Android技能说明
+## 1.1 通用Android技能说明
 
 * [Fastboot 刷机教程](./common/FastBoot.md)
 * [Android  常见问题解析](./common/AndroidStudioSUseProblem.md)
 * [Unbuntu android 环境初始配置](./common/unbuntu android环境初始配置.md)
 
 
-## 网络相关
-### Push推送研究
+## 1.2 网络相关
+### 1.2.1 Push推送研究
   这里列举当前推送平台的发展趋势以及现有的平台提供的功能，之后会结合上述分析根据实际的经验分析目前我们所采用的push的实现方式
 * [第三方推送平台及SDK汇总分析](./meizu)
  
 
 # 二. Web
-## 概述
+## 2.1概述
 这里主要说明web开发的发展动向以及一些主流的开发框架
 * [分布式Web开发概述](./web/spring_core_framework.md)
 
