@@ -7,3 +7,7 @@
 知名的开源项目的源码技术，帮你在开发过程中灵活使用和做出有效的扩展，并且帮助你提升设计能力
 * [EventBus 源码解析](http://a.codekk.com/detail/Android/Trinea/EventBus%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90)
 * [Volley 源码解析](http://a.codekk.com/detail/Android/grumoon/Volley%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90)
+
+## Http解析
+* [Http协议说明](http://kb.cnblogs.com/page/130970/#whathttp)
+   主要说明http协议的组成部分，方便分析okhttp以及HttpClient的源码
