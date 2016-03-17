@@ -11,3 +11,13 @@
 ## Http解析
 * [Http协议说明](http://kb.cnblogs.com/page/130970/#whathttp)
    主要说明http协议的组成部分，方便分析okhttp以及HttpClient的源码
+
+* [Volley http demo](https://github.com/smanikandan14/Volley-demo)
+
+
+## 代码混淆
+### aar包发布时混淆代码问题
+这里的混淆文件是编译aar包时的混淆文件
+
+### aar包发布时将混淆文件同时发布
+这里的混淆文件是随aar包发布，需要用户apk配置的混淆文件
