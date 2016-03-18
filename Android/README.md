@@ -14,6 +14,10 @@
 
 * [Volley http demo](https://github.com/smanikandan14/Volley-demo)
 
+## Push推送实践
+推送技术在Android的实现中一直多种变化的，归根结底都是需要客户端需要与服务端建立一种长连接，从而在需要推送消息时能够保持通道的畅通性
+* [第三方PushSDK 设计实践](../push/push_design_thirdparty_doc.md)
+关于长连接实现方案，目前开源的方案大多采用netty等开源项目,当然也可以基于NIO实现长连接
 
 ## 代码混淆
 ### aar包发布时混淆代码问题
