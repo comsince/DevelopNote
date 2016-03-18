@@ -1,27 +1,28 @@
-## ����
-������Ҫ����android�����ӳ������ŵ�����������ϣ��������Ϸ��������ϣ��������͡����������İ����Լ��Լ��Լ����ò������ĵ�������ѧϰ���ˣ�������һЩƿ����ʱ�򣬸�Ӧ�÷���һ�¼���������֮ǰѧϰ�����̣�ͬʱ�����ż����Ĳ��Ϸ�չ��Ҳ�᲻��ӿ��һЩ���µļ���������Ҫ���ǲ��ϵ�ѧϰ���롣
+## 概述
+这里主要整理android开发从初级入门到逐步深入的资料，包含网上分享的资料，技术博客。这里整理的包括自己以及自己觉得不错的文档。技术学习到此，可能有一些瓶颈的时候，更应该分享一下技术，整理之前学习的历程，同时伴随着技术的不断发展，也会不断涌现一些最新的技术，更需要我们不断的学习深入。
 
-* [�����ѧAndroid��� ](http://stormzhang.com/android/2016/01/21/learn-android-byself/#rd?sukey=16298ae1a3e33631d8ff97a89eec05d671fc1dcc6cce14e4aaa88d5b3ea7159b69c06477975258e0a9c46d6dee424b4e)
+* [如何自学Android编程 ](http://stormzhang.com/android/2016/01/21/learn-android-byself/#rd?sukey=16298ae1a3e33631d8ff97a89eec05d671fc1dcc6cce14e4aaa88d5b3ea7159b69c06477975258e0a9c46d6dee424b4e)
 
-## Դ�뼼������
-֪���Ŀ�Դ��Ŀ��Դ�뼼���������ڿ������������ʹ�ú�������Ч����չ�����Ұ����������������
-* [EventBus Դ�����](http://a.codekk.com/detail/Android/Trinea/EventBus%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90)
-* [Volley Դ�����](http://a.codekk.com/detail/Android/grumoon/Volley%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90)
+## 源码技术解析
+知名的开源项目的源码技术，帮你在开发过程中灵活使用和做出有效的扩展，并且帮助你提升设计能力
+* [EventBus 源码解析](http://a.codekk.com/detail/Android/Trinea/EventBus%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90)
+* [Volley 源码解析](http://a.codekk.com/detail/Android/grumoon/Volley%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90)
 
-## Http����
-* [HttpЭ��˵��](http://kb.cnblogs.com/page/130970/#whathttp)
-   ��Ҫ˵��httpЭ�����ɲ��֣��������okhttp�Լ�HttpClient��Դ��
+## Http解析
+* [Http协议说明](http://kb.cnblogs.com/page/130970/#whathttp)
+   主要说明http协议的组成部分，方便分析okhttp以及HttpClient的源码
 
 * [Volley http demo](https://github.com/smanikandan14/Volley-demo)
 
-## Push����ʵ��
-���ͼ�����Android��ʵ����һֱ���ֱ仯�ģ������׶�����Ҫ�ͻ�����Ҫ�����˽���һ�ֳ����ӣ��Ӷ�����Ҫ������Ϣʱ�ܹ�����ͨ���ĳ�ͨ��
-* [������PushSDK ���ʵ��](../push/push_design_thirdparty_doc.md)
-���ڳ�����ʵ�ַ�����Ŀǰ��Դ�ķ���������netty�ȿ�Դ��Ŀ,��ȻҲ���Ի���NIOʵ�ֳ�����
+## Push推送实践
+推送技术在Android的实现中一直多种变化的，归根结底都是需要客户端需要与服务端建立一种长连接，从而在需要推送消息时能够保持通道的畅通性
+* [第三方PushSDK 设计实践](../push/push_design_thirdparty_doc.md)
 
-## �������
-### aar������ʱ������������
-����Ļ����ļ��Ǳ���aar��ʱ�Ļ����ļ�
+关于长连接实现方案，目前开源的方案大多采用netty等开源项目,当然也可以基于NIO实现长连接
 
-### aar������ʱ�������ļ�ͬʱ����
-����Ļ����ļ�����aar����������Ҫ�û�apk���õĻ����ļ�
+## 代码混淆
+### aar包发布时混淆代码问题
+这里的混淆文件是编译aar包时的混淆文件
+
+### aar包发布时将混淆文件同时发布
+这里的混淆文件是随aar包发布，需要用户apk配置的混淆文件
