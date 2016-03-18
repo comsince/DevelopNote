@@ -3,6 +3,15 @@
 
 # 关于GitHub博客
   为了以后能够更好的发布博库，决定在github开通博客，使用[Jekyll](http://jekyllcn.com)
+  在这里记录在安装jekyll的出现的问题，之所在这里说明，是想记录自己在windows上搭建jekyll博客所遇到的问题，之后再对详细的步骤做说明
+
+  **NOTE:** 以下window安装过程中出现的问题，[Windows jekyll安装说明](http://jekyll-windows.juthilo.com)
+  * [关于 ruby 安装devkit 的config.yml 文件](https://segmentfault.com/q/1010000003891132)\
+
+   这里问题有点坑，配置文件中，ruby的路径钱还要加一条横线。
+   ruby gem 无法访问国外服务器，所以只能寻找过的镜像，淘宝的镜像用https证书问题，无法访问，所以就用了ruby-china的镜像
+  * [ruby.org无法访问的问题](https://github.com/ruby-china/rubygems-mirror/issues/5)
+  * [关于 Windows 下证书无法验证问题](https://github.com/ruby-china/rubygems-mirror/wiki)
 
 # 概述
 * 这个文档作为知识库的首要说明，主要记录开发经验积累，后续也会加上对一些具体案例的分析说明，加深对某一技术的理解这种模式应该成为一种学习的方式，遇到一个问题，对问题进行分类，类型维基百科的方法对改词条进行有效分类整理，并写出文档，形成一种知识的积累
