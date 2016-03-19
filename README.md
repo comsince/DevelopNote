@@ -6,10 +6,11 @@
   在这里记录在安装jekyll的出现的问题，之所在这里说明，是想记录自己在windows上搭建jekyll博客所遇到的问题，之后再对详细的步骤做说明
 
   **NOTE:** 以下window安装过程中出现的问题，[Windows jekyll安装说明](http://jekyll-windows.juthilo.com)
-  * [关于 ruby 安装devkit 的config.yml 文件](https://segmentfault.com/q/1010000003891132)\
+  * [关于 ruby 安装devkit 的config.yml 文件](https://segmentfault.com/q/1010000003891132)
 
-   这里问题有点坑，配置文件中，ruby的路径钱还要加一条横线。
-   ruby gem 无法访问国外服务器，所以只能寻找过的镜像，淘宝的镜像用https证书问题，无法访问，所以就用了ruby-china的镜像
+  这里问题有点坑，配置文件中，ruby的路径钱还要加一条横线。
+  ruby gem 无法访问国外服务器，所以只能寻找过的镜像，淘宝的镜像用https证书问题，无法访问，所以就用了ruby-china的镜像
+
   * [ruby.org无法访问的问题](https://github.com/ruby-china/rubygems-mirror/issues/5)
   * [关于 Windows 下证书无法验证问题](https://github.com/ruby-china/rubygems-mirror/wiki)
 
