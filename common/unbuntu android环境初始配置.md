@@ -75,3 +75,5 @@ net use z: \\vboxsvr\共享的目录名  这里就是share
 
 * 5.6 [windows 远程登录Ubuntu](http://jingyan.baidu.com/article/a501d80cf71bc3ec630f5e0c.html)
 
+## 安装Chrome
+* [Ubuntu 14.04 下安装google的浏览器——Chrome](http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html)

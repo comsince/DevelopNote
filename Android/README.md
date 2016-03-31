@@ -12,6 +12,10 @@
 * [Http协议说明](http://kb.cnblogs.com/page/130970/#whathttp)
    主要说明http协议的组成部分，方便分析okhttp以及HttpClient的源码
 
+## Http模拟请求工具
+* [HttpTest](http://www.atool.org/httptest.php)
+
+
 * [Volley http demo](https://github.com/smanikandan14/Volley-demo)
 
 ## Push推送实践
@@ -26,3 +30,9 @@
 
 ### aar包发布时将混淆文件同时发布
 这里的混淆文件是随aar包发布，需要用户apk配置的混淆文件
+
+
+## Android API
+### Android 相关教程
+* [Android官方培训课程中文版(v0.9.5)](http://hukai.me/android-training-course-in-chinese/index.html)
+### Android Notification
