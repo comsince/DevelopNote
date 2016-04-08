@@ -3,6 +3,10 @@
 
 * [如何自学Android编程 ](http://stormzhang.com/android/2016/01/21/learn-android-byself/#rd?sukey=16298ae1a3e33631d8ff97a89eec05d671fc1dcc6cce14e4aaa88d5b3ea7159b69c06477975258e0a9c46d6dee424b4e)
 
+
+## Android日志分析工具
+* [日志打印](http://blog.csdn.net/hansel/article/details/38088583)
+
 ## 源码技术解析
 知名的开源项目的源码技术，帮你在开发过程中灵活使用和做出有效的扩展，并且帮助你提升设计能力
 * [EventBus 源码解析](http://a.codekk.com/detail/Android/Trinea/EventBus%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90)
@@ -23,6 +27,10 @@
 * [第三方PushSDK 设计实践](../push/push_design_thirdparty_doc.md)
 
 关于长连接实现方案，目前开源的方案大多采用netty等开源项目,当然也可以基于NIO实现长连接
+
+## 协议定义Protobuf
+* [Google ProtoBuf](https://developers.google.com/protocol-buffers/docs/javatutorial#compiling-your-protocol-buffers)
+首先是写出proto文件，利用protobuf的自带的java生成工具生成java文件即可
 
 ## 代码混淆
 ### aar包发布时混淆代码问题
