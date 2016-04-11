@@ -17,6 +17,7 @@ category: blog
 
 ## 源码技术解析
 知名的开源项目的源码技术，帮你在开发过程中灵活使用和做出有效的扩展，并且帮助你提升设计能力
+
 * [EventBus 源码解析](http://a.codekk.com/detail/Android/Trinea/EventBus%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90)
 * [Volley 源码解析](http://a.codekk.com/detail/Android/grumoon/Volley%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90)
 
@@ -27,11 +28,11 @@ category: blog
 ## Http模拟请求工具
 * [HttpTest](http://www.atool.org/httptest.php)
 
-
 * [Volley http demo](https://github.com/smanikandan14/Volley-demo)
 
 ## Push推送实践
 推送技术在Android的实现中一直多种变化的，归根结底都是需要客户端需要与服务端建立一种长连接，从而在需要推送消息时能够保持通道的畅通性
+
 * [第三方PushSDK 设计实践](../push/push_design_thirdparty_doc.md)
 
 关于长连接实现方案，目前开源的方案大多采用netty等开源项目,当然也可以基于NIO实现长连接
@@ -51,6 +52,7 @@ category: blog
 ## Android API
 
 ### Android 相关教程
+
 * [Android官方培训课程中文版(v0.9.5)](http://hukai.me/android-training-course-in-chinese/index.html)
 
 ### Android Notification

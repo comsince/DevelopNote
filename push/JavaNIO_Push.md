@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Push 推送技术说明"
-description: Push推送NIO简要技术说明
+description: Push推送NIO简要技术说明,Java NIO (New IO) is an alternative IO API for Java (from Java 1.4), meaning alternative to the standard Java IO and Java Networking API's. Java NIO offers a different way of working with IO than the standard IO API's. 
 category: blog
 ---
 
