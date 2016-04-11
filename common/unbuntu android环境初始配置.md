@@ -90,10 +90,10 @@ win 7 执行一下命令
 ## 七. 常用技巧汇总
 
 * 得到当前目前全路径
-
+```
 	pwd 
 	/home/user/java/jdk1.6.0_45
-
+```
 * 运行appt时无法访问的问题
 
 	sudo apt-get install g++-multilib
@@ -109,10 +109,12 @@ win 7 执行一下命令
 
 ### 7.1 gitHub 基本命令
 * 分支转换
+
 	git branch --set-upstream-to=origin/flyme-3.6.x
 	git branch -a
 
 * 强制回退
+
 	git reset --hard origin/flyme-3.6.x
 
 * 设置当前分支依赖远程仓库地址，命令来给本地代码库关联一个远程仓库
