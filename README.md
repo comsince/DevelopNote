@@ -7,6 +7,10 @@ category: blog
 
 * [MarkDown 编辑器，推荐使用StackEdit](https://stackedit.io/editor)
 
+## 关于github博客Markdown注意事项
+* 注意引用代码必须加Tab
+* ```*```必须注意空格行间隔
+
 ## 关于GitHub博客
   为了以后能够更好的发布博库，决定在github开通博客，使用[Jekyll](http://jekyllcn.com)
   在这里记录在安装jekyll的出现的问题，之所在这里说明，是想记录自己在windows上搭建jekyll博客所遇到的问题，之后再对详细的步骤做说明

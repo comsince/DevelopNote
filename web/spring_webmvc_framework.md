@@ -1,23 +1,25 @@
 ---
 layout: post
-title: "SpringMVC ¿ò¼Ü"
-description: SpringMVC ¿ò¼Ü,ºËĞÄ¿ØÖÆÆ÷£¬IOC
+title: "SpringMVC æ¡†æ¶"
+description: SpringMVC æ¡†æ¶,æ ¸å¿ƒæ§åˆ¶å™¨ï¼ŒIOC
 category: blog
 ---
 
-# ¶ş. SpringMVC ¿ò¼Ü
-## 1 DispatcherServlet(ºËĞÄ¿ØÖÆÆ÷)
-* [spring webMvcFramwork](http://docs.spring.io/spring/docs/4.2.2.BUILD-SNAPSHOT/spring-framework-reference/htmlsingle/#spring-web) ËµÃ÷ÎÄµµ
-### 1.1 spring web FramworkµÄÇëÇó¹ı³ÌÁ÷
+## ä¸€. SpringMVC æ¡†æ¶
+###  DispatcherServlet(æ ¸å¿ƒæ§åˆ¶å™¨)
+* [spring webMvcFramwork](http://docs.spring.io/spring/docs/4.2.2.BUILD-SNAPSHOT/spring-framework-reference/htmlsingle/#spring-web) è¯´æ˜æ–‡æ¡£
+
+### 1.1 spring web Framworkçš„è¯·æ±‚è¿‡ç¨‹æµ
 ![image](http://docs.spring.io/spring/docs/4.2.2.BUILD-SNAPSHOT/spring-framework-reference/htmlsingle/images/mvc.png)
 
 ### 1.2 Spring Root Context
-* ´´½¨¿ÕµÄcontextConfigLocation
+* åˆ›å»ºç©ºçš„contextConfigLocation
 
 ![image](http://docs.spring.io/spring/docs/4.2.2.BUILD-SNAPSHOT/spring-framework-reference/htmlsingle/images/mvc-root-context.png)
 
 
-* web.xml ÅäÖÃ
+* web.xml é…ç½®
+
 ```
 	<web-app>
 	    <context-param>
@@ -29,7 +31,7 @@ category: blog
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 		    <param-name>contextConfigLocation</param-name>
-		    <!--ÕâÀïÃ»ÓĞ¶¨ÖÆÖ¸¶¨context³õÊ¼»¯ÅäÖÃµÄxml£¬Òò´Ë´´½¨µÄÊÇ¿ÕµÄContextConfigLocation-->
+		    <!--è¿™é‡Œæ²¡æœ‰å®šåˆ¶æŒ‡å®šcontextåˆå§‹åŒ–é…ç½®çš„xmlï¼Œå› æ­¤åˆ›å»ºçš„æ˜¯ç©ºçš„ContextConfigLocation-->
 		    <param-value></param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
@@ -43,11 +45,12 @@ category: blog
 	    </listener>
 	</web-app>
 ```
-## 1.3 SpringMVCÅäÖÃ
->**NOTE:** ÀûÓÃ```@RequestMapping```±ê×¢µÄ·½·¨Æä·½·¨²ÎÊı¾ßÓĞÈÎÒâĞÔ£¬ÓÃ»§¿ÉÒÔËæÒâÌí¼Ó£¬¾ßÌå²Î¼û[Defining @RequestMapping handler methods](http://docs.spring.io/spring/docs/4.2.2.BUILD-SNAPSHOT/spring-framework-reference/htmlsingle/#mvc-ann-methods)
-### 1.3.1 À¹½ØÆ÷ÅäÖÃ
+### 1.3 SpringMVCé…ç½®
+>**NOTE:** åˆ©ç”¨```@RequestMapping```æ ‡æ³¨çš„æ–¹æ³•å…¶æ–¹æ³•å‚æ•°å…·æœ‰ä»»æ„æ€§ï¼Œç”¨æˆ·å¯ä»¥éšæ„æ·»åŠ ï¼Œå…·ä½“å‚è§[Defining @RequestMapping handler methods](http://docs.spring.io/spring/docs/4.2.2.BUILD-SNAPSHOT/spring-framework-reference/htmlsingle/#mvc-ann-methods)
+#### 1.3.1 æ‹¦æˆªå™¨é…ç½®
 
-### 1.3.2 ÄÚÈİĞ­ÉÌÅäÖÃ
+#### 1.3.2 å†…å®¹åå•†é…ç½®
+
 ```
 	<mvc:annotation-driven content-negotiation-manager="contentNegotiationManager"/>
 
@@ -62,43 +65,46 @@ category: blog
 		<property name="favorPathExtension" value="true"/>
 	</bean>
 ```
-### 1.3.2 View¿ØÖÆÆ÷ÅäÖÃ
+#### 1.3.2 Viewæ§åˆ¶å™¨é…ç½®
 
 ```
-	<!-- ¶¨ÒåÎŞControllerµÄpath<->viewÖ±½ÓÓ³Éä -->
+	<!-- å®šä¹‰æ— Controllerçš„path<->viewç›´æ¥æ˜ å°„ -->
 	<mvc:view-controller path="/" view-name="redirect:${web.view.index}"/>
 ```
-### 1.3.3 ¾²Ì¬×ÊÔ´Ó³Éä
+#### 1.3.3 é™æ€èµ„æºæ˜ å°„
 
 ```
-	<!-- ¾²Ì¬×ÊÔ´Ó³Éä -->
+	<!-- é™æ€èµ„æºæ˜ å°„ -->
 	    <mvc:resources mapping="/static/**" location="/static/" cache-period="31536000"/>
 ```
-### 1.3.4 ¾²Ì¬×ÊÔ´·ÃÎÊÎŞControllerµÄÓ³Éä
+#### 1.3.4 é™æ€èµ„æºè®¿é—®æ— Controllerçš„æ˜ å°„
 
 ```
-	<!-- ¶Ô¾²Ì¬×ÊÔ´ÎÄ¼şµÄ·ÃÎÊ£¬ ½«ÎŞ·¨mappingµ½ControllerµÄpath½»¸ødefault servlet handler´¦Àí -->
+	<!-- å¯¹é™æ€èµ„æºæ–‡ä»¶çš„è®¿é—®ï¼Œ å°†æ— æ³•mappingåˆ°Controllerçš„pathäº¤ç»™default servlet handlerå¤„ç† -->
 	<mvc:default-servlet-handler />
 ```
-### 1.4 SpringÌí¼ÓREST¹¦ÄÜ
-#### 1.4.1 ÔÚÏìÓ¦ÌåÖĞ·µ»Ø×ÊÔ´×´Ì¬
-Õı³£Çé¿öÏÂ£¬µ±´¦Àí·½·¨·µ»ØJava¶ÔÏó£¨³ıStringÍâ£©Ê±£¬Õâ¸ö¶ÔÏó»á·ÅÔÚÄ£ĞÍÖĞ²¢ÔÚÊÓÍ¼ÖĞäÖÈ¾Ê¹ÓÃ¡£µ«ÊÇÈç¹û´¦Àí·½·¨Ê¹ÓÃÁË```@ResponseBody```£¬ÄÇ±íÃ÷HTTPĞÅÏ¢×ª»»»úÖÆ»á·¢»Ó×÷ÓÃ
+### 1.4 Springæ·»åŠ RESTåŠŸèƒ½
+#### 1.4.1 åœ¨å“åº”ä½“ä¸­è¿”å›èµ„æºçŠ¶æ€
+æ­£å¸¸æƒ…å†µä¸‹ï¼Œå½“å¤„ç†æ–¹æ³•è¿”å›Javaå¯¹è±¡ï¼ˆé™¤Stringå¤–ï¼‰æ—¶ï¼Œè¿™ä¸ªå¯¹è±¡ä¼šæ”¾åœ¨æ¨¡å‹ä¸­å¹¶åœ¨è§†å›¾ä¸­æ¸²æŸ“ä½¿ç”¨ã€‚ä½†æ˜¯å¦‚æœå¤„ç†æ–¹æ³•ä½¿ç”¨äº†```@ResponseBody```ï¼Œé‚£è¡¨æ˜HTTPä¿¡æ¯è½¬æ¢æœºåˆ¶ä¼šå‘æŒ¥ä½œç”¨
 
-#### 1.4.2 ÏûÏ¢×ª»»Æ÷
-Èç¹ûÊ¹ÓÃÁË```@ResponseBody```Spring»á½«·µ»ØµÄ¶ÔÏóÍ¨¹ı```HttpMessageConverter``` ×ª»»ÎªHttpµÄÏìÓ¦Ìå£¬¿ÉÒÔÍ¨¹ı```<mvc:message-converters```ÅäÖÃÏàÓ¦µÄ×ª»¯Æ÷
+#### 1.4.2 æ¶ˆæ¯è½¬æ¢å™¨
+å¦‚æœä½¿ç”¨äº†```@ResponseBody```Springä¼šå°†è¿”å›çš„å¯¹è±¡é€šè¿‡```HttpMessageConverter``` è½¬æ¢ä¸ºHttpçš„å“åº”ä½“ï¼Œå¯ä»¥é€šè¿‡```<mvc:message-converters```é…ç½®ç›¸åº”çš„è½¬åŒ–å™¨
 
-## 1.5 View technologies
-# Èı SpringORM¿ò¼Ü
-## 3.1 ³Ö¾Ã²ã¿ò¼ÜMybatis
-### 3.1.1 ¿ò¼ÜËµÃ÷
-* [1.Mybatis-github¿ªÔ´ÏîÄ¿µØÖ·](https://github.com/mybatis/mybatis-3)
-* [2.Mybatis¹Ù·½ËµÃ÷ÎÄµµ](http://mybatis.github.io/mybatis-3/) 
-* [3.Mybatis-spring ÕûºÏÏîÄ¿](https://github.com/mybatis/spring)
-* [4.Mybatis-springÕûºÏÏîÄ¿ÖĞÎÄËµÃ÷ÎÄµµ](http://mybatis.github.io/spring/zh/index.html)
-### 3.1.2 Ê¹ÓÃËµÃ÷
-Spring¼ÓÔØMybatis¿ò¼ÜÊµ¼ÊÊÇ³õÊ¼»¯¿ò¼ÜËùĞèÒªµÄ²ÎÊı£¬ÀûÓÃSpringIoc¹¦ÄÜ¿ÉÒÔÊµÏÖµÄBean×é×°Óë³õÊ¼»¯£¬ÒÔÏÂÊÇÅäÖÃmapperµÄConfiger
+### 1.5 View technologies
+## ä¸‰ SpringORMæ¡†æ¶
+### 3.1 æŒä¹…å±‚æ¡†æ¶Mybatis
+#### 3.1.1 æ¡†æ¶è¯´æ˜
+
+* [1.Mybatis-githubå¼€æºé¡¹ç›®åœ°å€](https://github.com/mybatis/mybatis-3)
+* [2.Mybatiså®˜æ–¹è¯´æ˜æ–‡æ¡£](http://mybatis.github.io/mybatis-3/) 
+* [3.Mybatis-spring æ•´åˆé¡¹ç›®](https://github.com/mybatis/spring)
+* [4.Mybatis-springæ•´åˆé¡¹ç›®ä¸­æ–‡è¯´æ˜æ–‡æ¡£](http://mybatis.github.io/spring/zh/index.html)
+
+#### 3.1.2 ä½¿ç”¨è¯´æ˜
+SpringåŠ è½½Mybatisæ¡†æ¶å®é™…æ˜¯åˆå§‹åŒ–æ¡†æ¶æ‰€éœ€è¦çš„å‚æ•°ï¼Œåˆ©ç”¨SpringIocåŠŸèƒ½å¯ä»¥å®ç°çš„Beanç»„è£…ä¸åˆå§‹åŒ–ï¼Œä»¥ä¸‹æ˜¯é…ç½®mapperçš„Configer
+
 ```
-	<!-- É¨ÃèbasePackageÏÂËùÓĞÒÔ@MyBatisDao×¢½âµÄ½Ó¿Ú -->
+	<!-- æ‰«æbasePackageä¸‹æ‰€æœ‰ä»¥@MyBatisDaoæ³¨è§£çš„æ¥å£ -->
 	    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 		<property name="basePackage" value="com.thinkgem.jeesite"/>

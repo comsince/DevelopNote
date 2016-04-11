@@ -5,21 +5,12 @@ description: 本项目旨在分析现在成熟的开发技术，包括做一个�
 category: blog
 ---
 
-# 概览
-本项目旨在分析现在成熟的开发技术，包括做一个应用系统所需要的各方面知识的汇总，虽然每一个技术并没有进行深入的技术分析，但是足以让你了解你自己的所喜欢的技术领域；当然最重要的是分享我在开发过程中遇到的各种技术问题，本文旨在理清各个技术领域的之前的相互共性，更为重要的是提供一种学习的路径和方向；在下面的说明中，我会给出一些个人认为比较流行且可用以商业的开源项目，针对项目做具体的说明；当然也会包括我个人的一些项目以及在公司中所见到的技术方案。
-
-# Web开发说明
-## 1 关于web技术的一些博客站点
+## Web开发说明
+### 关于web技术的一些博客站点
 * [1.前后端分离的思考与实践系列文章](http://ued.taobao.org/blog/2014/04/full-stack-development-with-nodejs/) 
-* [2.Web开发演进方向—Web 研发模式演变](https://github.com/lifesinger/lifesinger.github.io/issues/184)
-这篇文章说明web开发发展进程中，全后端分离实现所作的探究，不断得再探索一种高校的开发模式
-
-* [3.淘宝核心技术团队博客](http://csrd.aliapp.com/?page_id=2)
-说明当前淘宝核心技术团队正在研发的基础服务，大部分已经开源
-
-* [4.阿里 开源项目](https://github.com/alibaba?utf8=%E2%9C%93&query=cobar)
-  主要包括web服务中各个领域的开源项目，涵盖数据库，中间件
-
+* [2.Web开发演进方向—Web 研发模式演变](https://github.com/lifesinger/lifesinger.github.io/issues/184) 这篇文章说明web开发发展进程中，全后端分离实现所作的探究，不断得再探索一种高校的开发模式
+* [3.淘宝核心技术团队博客](http://csrd.aliapp.com/?page_id=2) 说明当前淘宝核心技术团队正在研发的基础服务，大部分已经开源
+* [4.阿里 开源项目](https://github.com/alibaba?utf8=%E2%9C%93&query=cobar) 主要包括web服务中各个领域的开源项目，涵盖数据库，中间件
 * [5.前阿里架构师的收藏夹](http://afoo.me/favorite.html#%E6%94%B6%E8%97%8F%E5%A4%B9)
 * [6.业务系统扩展-阿里中间件技术解密](http://wenku.baidu.com/link?url=A1s1yXfgtNJLnZ8K-nKBEyw49L3ZKlO9UUWkEDcdQJ3ER4XWQE2KL-13hS5eIYzIjq1lVoms3B--y-PnVCghU6ozdOBIsrZdl3vb5llsMoS) 
 
@@ -33,22 +24,19 @@ category: blog
 * [6.基于iBatis和Spring的轻量级分布式数据访问框架(DDAL) ](https://github.com/alibaba/cobarclient)
 
 
-# 一. Spring核心框架
-## 1.Spring 简化java开发的关键策略
+## 一. Spring核心框架
+### 1.1 Spring 简化java开发的关键策略
 * 基于POJO 的轻量级和最小侵入性偏程
  Spring 竭力避免因自身的API 而弄乱体的应用代码。Spring 不会强迫你实现Spring 规范的接口或推承Spring 规范的类，相反，在基于Spring 构建的应用中，它的类通常没有任何痕迹表明你使用了Spring。最坏的场景是， 一个类或许会使用Spring注解，但它依旧是POJO
-
 * 通过依赖注入和面向接口实现松耦合
 通过依赖注入 ，对象的依赖关系将由负责协调系统中各个对象的第三方组件在创建对象时设定。对象无需自行创建和管理他们的依赖关系--依赖关系将被自动注入到需要他们的对象中去。
-
 * 基于切面和惯例进行声明式编程
 依赖注入让相互协作的软件组件保持松散耦合，而AOP编程允许你把遍布应用各处的功能分离出来形成可重用的组件
-
 * 通过切面和模板减少样板式代码
 
 
 
-## 2 说明
+## 二 说明
 Spring是后端核心的容器框架，管理后端服务，与其相关的附属框架都依赖于它
 ### 2.1 SpringFramwork modules
 > **以下为SpringFramework的模块图  **
@@ -71,18 +59,20 @@ Spring是后端核心的容器框架，管理后端服务，与其相关的附�
 
 
 Ioc bean 包含的元素
+
 * （类名）A package-qualified class name: typically the actual implementation class of the bean being defined.
 * Bean behavioral configuration elements, which state how the bean should behave in the container (scope, lifecycle callbacks, and so forth). 
 * References to other beans that are needed for the bean to do its work; these references are also called collaborators or dependencies.
 *  Other configuration settings to set in the newly created object, for example, the number of connections to use in a bean that manages a connection pool, or the size limit of the pool. 
 
-##3 Dependency Injection（依赖注入）
+## 三 Dependency Injection（依赖注入）
 ### 3.1 依赖注入
 Dependency injection (DI) is a process whereby objects define their dependencies, that is, the other objects they work with, only through constructor arguments, arguments to a factory method, or properties that are set on the object instance after it is constructed or returned from a factory method. 
 
 ### 3.2 声明bean并初始化
 
 * 原理说明
+
 ```
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
 	</bean>
@@ -115,7 +105,7 @@ new org.springframework.web.multipart.commons.CommonsMultipartResolver () ;
 ```
 
 
-###3.3 Bean属性两种注入方式
+### 3.3 Bean属性两种注入方式
 #### 3.3.1 Constructor-based dependency injection
 ```
 	package x.y;
@@ -175,6 +165,7 @@ new org.springframework.web.multipart.commons.CommonsMultipartResolver () ;
 > **NOTE:** 一旦ExampleBean被实例化， Spring 就会调用```<property>``` 元章所指定属性的setter 方桂为该属性注入值。
 
 * 注入对象(依赖其他对象)
+
 ```
 	<!-- in the parent context -->
 	<bean id="accountService" class="com.foo.SimpleAccountService">
@@ -192,6 +183,7 @@ new org.springframework.web.multipart.commons.CommonsMultipartResolver () ;
 ```
 
 * 注入内部类
+
 ```
 	<bean id="outer" class="...">
 	    <!-- instead of using a reference to a target bean, simply define the target bean inline -->
@@ -205,6 +197,7 @@ new org.springframework.web.multipart.commons.CommonsMultipartResolver () ;
 ```
 
 * 注入集合对象
+
 ```
 	<bean id="moreComplexObject" class="example.ComplexObject">
 	    <!-- results in a setAdminEmails(java.util.Properties) call -->
@@ -292,6 +285,7 @@ new org.springframework.web.multipart.commons.CommonsMultipartResolver () ;
 > The use of``` <context:component-scan>``` implicitly enables the functionality of ```<context:annotation-config>```. There is usually no need to include the ```<context:annotation-config>``` element when using``` <context:component-scan>```.
 
 默认情况下```<context:component-scan>```查找使用构造型（stereotype）注解所标注的类，如下
+
 * ```@Component``` 通用的构造型注解，标识该类为Spring组件
 * ```@Controller``` 标识该类定义为Spring MVC controller
 *  ```@Repository```标识将该类定义为数据仓库
