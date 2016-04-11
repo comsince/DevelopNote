@@ -414,8 +414,7 @@ init 初始化SDK
         </receiver>
 
 
-* (2)客户端需要自己实现MyPushMessageReceiver，接收Push服务的消息，并实现对消息的处理
-MyPushMessageReceiver如下代码所示，继承com.meizu.cloud.pushsdk.MzPushMessageReceiver
+* (2)客户端需要自己实现MyPushMessageReceiver，接收Push服务的消息，并实现对消息的处理MyPushMessageReceiver如下代码所示，继承com.meizu.cloud.pushsdk.MzPushMessageReceiver
 
 	public class MyPushMsgReceiver extends MzPushMessageReceiver {
 	    @Override
