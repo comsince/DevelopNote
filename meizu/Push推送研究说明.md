@@ -1,4 +1,9 @@
-
+---
+layout: post
+title: "Push推送对比研究分析"
+description: 针对市场各个推送SDK做一些简要的说明，方便SDK的设计与开发
+category: blog
+---
 
 
 # Push推送对比研究分析
@@ -29,113 +34,113 @@
      
 #### 3.2 AndroidManifest.xm配置
 ##### 3.2.1 权限声明
-```
-<uses-permissionandroid:name="android.permission.INTERNET"/>
-<uses-permissionandroid:name="android.permission.READ_PHONE_STATE"/>
-<uses-permissionandroid:name="android.permission.ACCESS_NETWORK_STATE"/>
-<uses-permissionandroid:name="android.permission.CHANGE_WIFI_STATE"/>
-<uses-permissionandroid:name="android.permission.WAKE_LOCK"/>
-<uses-permissionandroid:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-<uses-permissionandroid:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-<uses-permissionandroid:name="android.permission.VIBRATE"/>
-<uses-permissionandroid:name="android.permission.ACCESS_WIFI_STATE"/>
-<uses-permissionandroid:name="getui.permission.GetuiService.第三方包名"/>
-<uses-permissionandroid:name="android.permission.GET_TASKS"/>
-<!--自定义权限-->
-<permission
-    android:name="getui.permission.GetuiService.第三方包名"
-    android:protectionLevel="normal">
-</permission>
-```
+
+	<uses-permissionandroid:name="android.permission.INTERNET"/>
+	<uses-permissionandroid:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permissionandroid:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permissionandroid:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permissionandroid:name="android.permission.WAKE_LOCK"/>
+	<uses-permissionandroid:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permissionandroid:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permissionandroid:name="android.permission.VIBRATE"/>
+	<uses-permissionandroid:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permissionandroid:name="getui.permission.GetuiService.第三方包名"/>
+	<uses-permissionandroid:name="android.permission.GET_TASKS"/>
+	<!--自定义权限-->
+	<permission
+	    android:name="getui.permission.GetuiService.第三方包名"
+	    android:protectionLevel="normal">
+	</permission>
+
 ##### 3.2.2 服务项配置 
-```
-<!--个推SDK配置开始-->
-<!--配置第三方应用参数属性-->
-<meta-data
-    android:name="PUSH_APPID"
-    android:value="你的APPID"/><!--替换为第三方应用的APPID-->
-<meta-data
-    android:name="PUSH_APPKEY"
-    android:value="你的APPKEY"/><!--替换为第三方应用的APPKEY-->
-<meta-data
-    android:name="PUSH_APPSECRET"
-    android:value="你的APPSECRET"/><!--替换为第三方应用的APPSECRET-->
-<meta-data
-    android:name="PUSH_GROUPID"
-    android:value=""/>
-<!--配置SDK核心服务-->
-<service
-    android:name="com.igexin.sdk.PushService"
-    android:exported="true"
-    android:label="NotificationCenter"
-    android:process=":pushservice">
-</service>
-<receiver 
-    android:name="com.igexin.sdk.PushReceiver">
-    <intent-filter>
-        <action android:name="android.intent.action.BOOT_COMPLETED"/>
-        <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
-        <action android:name="android.intent.action.USER_PRESENT"/>
-        <action android:name="com.igexin.sdk.action.refreshls"/>
-    </intent-filter>
-</receiver>
-<receiver
-        android:name="com.igexin.sdk.PushManagerReceiver"
-        android:exported="false" >
-        <intent-filter>
-            <action android:name="com.igexin.sdk.action.pushmanager" />
-        </intent-filter>
-</receiver>
-<activity
-    android:name="com.igexin.sdk.PushActivity"
-    android:excludeFromRecents="true"
-    android:exported="false"
-    android:process=":pushservice"
-    android:taskAffinity="com.igexin.sdk.PushActivityTask"
-    android:theme="@android:style/Theme.Translucent.NoTitleBar">
-</activity>
-<!--配置弹框activity-->
-<activity 
-    android:name="com.igexin.getuiext.activity.GetuiExtActivity"
-    android:configChanges="orientation|keyboard|keyboardHidden"
-    android:excludeFromRecents="true"
-    android:process=":pushservice"
-    android:taskAffinity="android.task.myServicetask"
-    android:theme="@android:style/Theme.Translucent.NoTitleBar"
-    android:exported="false"/>
-<receiver 
-    android:name="com.igexin.getuiext.service.PayloadReceiver"
-    android:exported="false">
-    <intent-filter>
-        <!--这个com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4固定，不能修改-->
-        <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4"/>
-        <!--替换为android:name="com.igexin.sdk.action.第三方的appId"-->
-        <action android:name="com.igexin.sdk.action.你的APPID"/>
-    </intent-filter>
-</receiver>
-<service 
-    android:name="com.igexin.getuiext.service.GetuiExtService"
-    android:process=":pushservice"/>
-<!--个推download模块配置-->
-<service 
-    android:name="com.igexin.download.DownloadService"
-    android:process=":pushservice"/>
-<receiver
-        android:name="com.igexin.download.DownloadReceiver">
-        <intent-filter>
-            <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
-        </intent-filter>
-</receiver>
-<provider
-         android:name="com.igexin.download.DownloadProvider"
-         android:process=":pushservice"
-         android:authorities="downloads.你的包名"/><!--替换为downloads.第三方包名-->
-```
+
+	<!--个推SDK配置开始-->
+	<!--配置第三方应用参数属性-->
+	<meta-data
+	    android:name="PUSH_APPID"
+	    android:value="你的APPID"/><!--替换为第三方应用的APPID-->
+	<meta-data
+	    android:name="PUSH_APPKEY"
+	    android:value="你的APPKEY"/><!--替换为第三方应用的APPKEY-->
+	<meta-data
+	    android:name="PUSH_APPSECRET"
+	    android:value="你的APPSECRET"/><!--替换为第三方应用的APPSECRET-->
+	<meta-data
+	    android:name="PUSH_GROUPID"
+	    android:value=""/>
+	<!--配置SDK核心服务-->
+	<service
+	    android:name="com.igexin.sdk.PushService"
+	    android:exported="true"
+	    android:label="NotificationCenter"
+	    android:process=":pushservice">
+	</service>
+	<receiver 
+	    android:name="com.igexin.sdk.PushReceiver">
+	    <intent-filter>
+		<action android:name="android.intent.action.BOOT_COMPLETED"/>
+		<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+		<action android:name="android.intent.action.USER_PRESENT"/>
+		<action android:name="com.igexin.sdk.action.refreshls"/>
+	    </intent-filter>
+	</receiver>
+	<receiver
+		android:name="com.igexin.sdk.PushManagerReceiver"
+		android:exported="false" >
+		<intent-filter>
+		    <action android:name="com.igexin.sdk.action.pushmanager" />
+		</intent-filter>
+	</receiver>
+	<activity
+	    android:name="com.igexin.sdk.PushActivity"
+	    android:excludeFromRecents="true"
+	    android:exported="false"
+	    android:process=":pushservice"
+	    android:taskAffinity="com.igexin.sdk.PushActivityTask"
+	    android:theme="@android:style/Theme.Translucent.NoTitleBar">
+	</activity>
+	<!--配置弹框activity-->
+	<activity 
+	    android:name="com.igexin.getuiext.activity.GetuiExtActivity"
+	    android:configChanges="orientation|keyboard|keyboardHidden"
+	    android:excludeFromRecents="true"
+	    android:process=":pushservice"
+	    android:taskAffinity="android.task.myServicetask"
+	    android:theme="@android:style/Theme.Translucent.NoTitleBar"
+	    android:exported="false"/>
+	<receiver 
+	    android:name="com.igexin.getuiext.service.PayloadReceiver"
+	    android:exported="false">
+	    <intent-filter>
+		<!--这个com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4固定，不能修改-->
+		<action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4"/>
+		<!--替换为android:name="com.igexin.sdk.action.第三方的appId"-->
+		<action android:name="com.igexin.sdk.action.你的APPID"/>
+	    </intent-filter>
+	</receiver>
+	<service 
+	    android:name="com.igexin.getuiext.service.GetuiExtService"
+	    android:process=":pushservice"/>
+	<!--个推download模块配置-->
+	<service 
+	    android:name="com.igexin.download.DownloadService"
+	    android:process=":pushservice"/>
+	<receiver
+		android:name="com.igexin.download.DownloadReceiver">
+		<intent-filter>
+		    <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+		</intent-filter>
+	</receiver>
+	<provider
+		 android:name="com.igexin.download.DownloadProvider"
+		 android:process=":pushservice"
+		 android:authorities="downloads.你的包名"/><!--替换为downloads.第三方包名-->
+
 #### 3.3 项目代码初始化    
 在您应用程序启动初始化阶段，初始化SDK
-```
-PushManager.getInstance().initialize(this.getApplicationContext());
-```
+
+	PushManager.getInstance().initialize(this.getApplicationContext());
+
 > **Note:**
 > 该方法必须在Activity或Service类内调用。一般情况下，可以在Activity的onCreate()方法中调用。由于应用每启动一个新的进程，就会调用一次Application的oncreat方法，而个推SDK是一个独立的进程，会导致在一个应用中至少调用2次Application的onCreate()，这样会影响应用的处理逻辑，所以不建议在Application继承类中调用。
 为保证意外情况导致初始化失败，建议应用程序每次启动时都调用一次该初始化接口。
@@ -166,79 +171,79 @@ PushManager.getInstance().initialize(this.getApplicationContext());
 
 #### 3.2 AndroidManifest.xm配置
 ##### 3.2.1 权限声明
-```
-<!-- Push service 运行需要的权限 -->
-<uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="android.permission.READ_PHONE_STATE" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />  
-<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-<uses-permission android:name="android.permission.WRITE_SETTINGS" />
-<uses-permission android:name="android.permission.VIBRATE" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
-<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
-<uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-```
+
+	<!-- Push service 运行需要的权限 -->
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />  
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+	<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+	<uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
 ##### 3.2.2 服务项配置 
-```
-<!-- push service start -->
-<!-- 用于接收系统消息以保证PushService正常运行 -->
-<receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"
-    android:process=":bdservice_v1">
-    <intent-filter>
-        <action android:name="android.intent.action.BOOT_COMPLETED" />
-        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-        <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
-        <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
-        <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
-        <action android:name="android.intent.action.MEDIA_MOUNTED" />
-        <action android:name="android.intent.action.USER_PRESENT" />
-        <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-        <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
-    </intent-filter>
-</receiver>
-<!-- Push服务接收客户端发送的各种请求-->
-<receiver android:name="com.baidu.android.pushservice.RegistrationReceiver"
-    android:process=":bdservice_v1">
-    <intent-filter>
-        <action android:name="com.baidu.android.pushservice.action.METHOD" />
-        <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
-    </intent-filter>
-    <intent-filter>
-        <action android:name="android.intent.action.PACKAGE_REMOVED"/>
-        <data android:scheme="package" />
-    </intent-filter>                   
-</receiver>
-<service android:name="com.baidu.android.pushservice.PushService" android:exported="true" 
-    android:process=":bdservice_v1" >
-    <intent-filter >
-            <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE"/>
-    </intent-filter>
-</service>
-<!-- 4.4版本新增的CommandService声明，提升小米和魅族手机上的实际推送到达率 -->
-<service android:name="com.baidu.android.pushservice.CommandService"
-    android:exported="true" />
-```
+
+	<!-- push service start -->
+	<!-- 用于接收系统消息以保证PushService正常运行 -->
+	<receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"
+	    android:process=":bdservice_v1">
+	    <intent-filter>
+		<action android:name="android.intent.action.BOOT_COMPLETED" />
+		<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+		<action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+		<action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+		<!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+		<action android:name="android.intent.action.MEDIA_MOUNTED" />
+		<action android:name="android.intent.action.USER_PRESENT" />
+		<action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+		<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+	    </intent-filter>
+	</receiver>
+	<!-- Push服务接收客户端发送的各种请求-->
+	<receiver android:name="com.baidu.android.pushservice.RegistrationReceiver"
+	    android:process=":bdservice_v1">
+	    <intent-filter>
+		<action android:name="com.baidu.android.pushservice.action.METHOD" />
+		<action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+	    </intent-filter>
+	    <intent-filter>
+		<action android:name="android.intent.action.PACKAGE_REMOVED"/>
+		<data android:scheme="package" />
+	    </intent-filter>                   
+	</receiver>
+	<service android:name="com.baidu.android.pushservice.PushService" android:exported="true" 
+	    android:process=":bdservice_v1" >
+	    <intent-filter >
+		    <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE"/>
+	    </intent-filter>
+	</service>
+	<!-- 4.4版本新增的CommandService声明，提升小米和魅族手机上的实际推送到达率 -->
+	<service android:name="com.baidu.android.pushservice.CommandService"
+	    android:exported="true" />
+
 #### 3.3 项目代码初始化
 
  - 配置Application信息
  
- ```
-<application
-    android:name="com.baidu.frontia.FrontiaApplication"
-    android:icon="@drawable/ic_launcher"
-    android:label="@string/app_name">
+ 
+	<application
+	    android:name="com.baidu.frontia.FrontiaApplication"
+	    android:icon="@drawable/ic_launcher"
+	    android:label="@string/app_name">
 
- ```
+ 
  - 启动云推送
 
 
 在当前工程的主Activity的onCreate函数中，添加以下代码：
-```
-PushManager.startWork(getApplicationContext(),PushConstants.LOGIN_TYPE_API_KEY,"API KEY")
-```
+
+	PushManager.startWork(getApplicationContext(),PushConstants.LOGIN_TYPE_API_KEY,"API KEY")
+
 
 ## 极光推送
 ### 一.主要功能及特点
@@ -262,7 +267,7 @@ PushManager.startWork(getApplicationContext(),PushConstants.LOGIN_TYPE_API_KEY,"
 
 #### 3.2 AndroidManifest.xm配置
 ##### 3.2.1 权限声明
-```
+
     <!-- Required -->
     <permission android:name="Your Package.permission.JPUSH_MESSAGE" android:protectionLevel="signature" />
 
@@ -287,9 +292,9 @@ PushManager.startWork(getApplicationContext(),PushConstants.LOGIN_TYPE_API_KEY,"
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
 
-```
+
 ##### 3.2.2 服务项配置 
-```
+
 
         <!-- Required -->
         <service
@@ -351,18 +356,18 @@ PushManager.startWork(getApplicationContext(),PushConstants.LOGIN_TYPE_API_KEY,"
         <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
         <!-- Required. AppKey copied from Portal -->
         <meta-data android:name="JPUSH_APPKEY" android:value="Your AppKey"/> 
-```
+
 #### 3.3 项目代码初始化
 init 初始化SDK
-```
-public static void init(Context context)
-```
+
+	public static void init(Context context)
+
 
 可以设置调试模式
-```
-// You can enable debug mode in developing state. You should close debug mode when release.
-public static void setDebugMode(boolean debugEnalbed)
-```
+
+	// You can enable debug mode in developing state. You should close debug mode when release.
+	public static void setDebugMode(boolean debugEnalbed)
+
 ## Flyme云推送
 ### 一.主要功能及特点
   app为了及时获取到服务器端的消息更新，一般会采用轮寻或者推送的方式来获取消息更新，轮寻导致终端设备流量、电量、等系统资源严重浪费，所以目前采用的比较广泛的是推送的方式，目前 Meizu 的 Push SDK 不能脱离 Flyme OS 存在，当该 SDK 脱离 Flyme OS 之后由于没有长链接导致不能正常收到推送消息。本 SDK 首先要解决的时长链接由 SDK 自己维护，同时还要解决的就是多个 app 引用同一个 SDK 时长链接的复用问题。
@@ -373,17 +378,17 @@ public static void setDebugMode(boolean debugEnalbed)
 集成前准备工作
   PushSDk 提供一个Jar包以及两个.so文件，目录结构如下
 
-```
+
 	--libs
 	  --armeabi
 	  ---libcrypto_framwork.so
 	  ---libsnappy-jni.so
 	  --pushsdk-all-V1.0.jar
-```
+
 #### 3.2 AndroidManifest.xm配置
 ##### 3.2.1 权限声明
-```xml
-<!-- Push service 运行需要的权限 -->
+
+    <!-- Push service 运行需要的权限 -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -395,11 +400,11 @@ public static void setDebugMode(boolean debugEnalbed)
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-```
+
 ##### 3.2.2 服务项配置 
 * (1)AndroidManifest.xml注册消息接收receiver
 
-```xml
+
         <!-- push应用定义消息receiver声明 -->
         <receiver android:name="your.package.MyPushMsgReceiver">
             <intent-filter>
@@ -407,12 +412,12 @@ public static void setDebugMode(boolean debugEnalbed)
                 <action android:name="com.meizu.cloud.pushservice.action.ON_MESSAGE" />
             </intent-filter>
         </receiver>
-```
+
 
 * (2)客户端需要自己实现MyPushMessageReceiver，接收Push服务的消息，并实现对消息的处理
 MyPushMessageReceiver如下代码所示，继承com.meizu.cloud.pushsdk.MzPushMessageReceiver
 
-```java
+
     public class MyPushMsgReceiver extends MzPushMessageReceiver {
     @Override
     public void onRegister(Context context, String s) {
@@ -424,9 +429,9 @@ MyPushMessageReceiver如下代码所示，继承com.meizu.cloud.pushsdk.MzPushMe
 
     }
 }
-```
+
 * (3)AndroidManifest.xml增加pushservice配置
-```xml
+
         <service
             android:name="com.meizu.cloud.pushsdk.pushservice.MzPushService"
             android:exported="true"
@@ -453,11 +458,11 @@ MyPushMessageReceiver如下代码所示，继承com.meizu.cloud.pushsdk.MzPushMe
         <service
             android:name="com.meizu.cloud.pushsdk.pushservice.PushBroadcastProcessorService"
             android:exported="true"/>
-```
+
 #### 3.3 项目代码初始化
 * 在自定义Application的onCreate方法中调用Push绑定接口
   
-```java
+
    PushManager.register(Context context)
-```
+
 
