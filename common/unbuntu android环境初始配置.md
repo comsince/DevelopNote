@@ -95,82 +95,100 @@ win 7 执行一下命令
 	/home/user/java/jdk1.6.0_45
 ```
 * 运行appt时无法访问的问题
-
+```
 	sudo apt-get install g++-multilib
 	sudo apt-get install ia32-libs
-
+```
 
 * 获取文件写权限
+```
 	sudo gedit /etc/profile
+```
 *　刷新当前环境变量
+```
 	source /etc/profile
-
+```
 
 
 ### 7.1 gitHub 基本命令
 * 分支转换
-
+```
 	git branch --set-upstream-to=origin/flyme-3.6.x
 	git branch -a
-
+```
 * 强制回退
-
+```
 	git reset --hard origin/flyme-3.6.x
-
+```
 * 设置当前分支依赖远程仓库地址，命令来给本地代码库关联一个远程仓库
-
+```
 	$ git remote add origin git@example.com:User/project_name.git
-
+```
 * 如何修改已设置好的git远程仓库地址
-
+```
 	$ git remote rm origin
 	$ git remote add origin git@new-example.com:Newuser/new_project_name.git
-
+```
 
 ## 7.2 unbutu常用命令
 
 * 安装卸载系统app
+```
 	卸载：adb uninstall com.meizu.mzsnssyncservice
 	安装：adb install -r Sns_eng.apk
-
+```
 * 强制关闭进程命令
+```
 	xkill
+```
 * 查看隐藏文件
+```
 	crtl+h
-
+```
 * 就可以用root的权限图形操作任何文件，删除，编辑，拷贝.
-sudo nautilus
-
+```
+	sudo nautilus
+```
 * 要修改文件夹内所有的文件和文件夹及子文件夹属性为可写可读可执行
+```
 	sudo chmod -R 777 upload
+```
 * 递归更改文件权限
+```
 	chmod 777 -R ./sdk/
-
+```
 * 解压文件
+```
 	sudo tar xvzf jdk-8u5-linux-x64.tar.gz
-
-* push xxx.apk 到system/app :
+```
+* push xxx.apk 到system/app
+```
 	先 adb shell, 然后 mount -o remount rw /system/，
 	然后退出shell，adb push xxx.apk  /system/app
-
+```
 
 * 解决failed to copy 'Gallery-m71-eng-debug.apk' to '/system/priv-app/Gallery.apk': Read-only file system
+```
 	adb remount
-
+```
 * 当运行一个命令的时候出现rm failed for CoeeRoat.apk, Read-only file system
+```
 	adb shell mount -o remount rw /system  挂载设备
-
+```
 * push内置应用到system目录：
-adb shell mount -o remount rw /system
-adb push clock.apk /system/app/clock.apk
-
+```
+	adb shell mount -o remount rw /system
+	adb push clock.apk /system/app/clock.apk
+```
 * 删除内置应用：
+```
 	adb shell mount -o remount rw /system
 	adb shell
 	cd system/app
 	rm -rf clock.apk
-
+```
 * bat 文件
+```
 	adb shell mount -o remount,rw /dev/block/mtdblock3 /system
 	adb push sssss  /system/bin/rota
 	adb shell sync
@@ -182,18 +200,23 @@ adb push clock.apk /system/app/clock.apk
 	adb shell sync
 	adb shell mount -o remount,ro /dev/block/mtdblock3 /system
 	pause
-
+```
 * 查看property
+```
 	getprop | grep "ro.product.model"
-
+```
 
 * 搜索命令
+```
 	grep -nr "windowTranslucentNavigation" .
-
+```
 
 * 解决无法链接手机的问题
+```
 	sudo ./adb devices
-
+```
 
 * 打开系统监视器
+```
 	gnome-system-monitor
+```
