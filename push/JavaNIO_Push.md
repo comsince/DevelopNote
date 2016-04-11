@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Push 推送技术说明"
+description: Push推送NIO简要技术说明
+category: blog
+---
+
 # Push 推送技术说明
 [TOC]
 ## Java NIO 使用说明
@@ -51,57 +58,57 @@ A Selector is a Java NIO component which can examine one or more NIO Channel's, 
 下面具体介绍selector的使用方法及步骤：
 #### 1.Creating a Selector
 ```java
-Selector selector = Selector.open();
+	Selector selector = Selector.open();
 ```
 #### 2.Registering Channels with the Selector
 In order to use a Channel with a Selector you must register the Channel with the Selector. This is done using the SelectableChannel.register() method, like this: 
 为了使用利用Selector管理channel，首先必须注册该channel，调用register()方法：
 ```java
-channel.configureBlocking(false);
-SelectionKey key = channel.register(selector, SelectionKey.OP_READ);
+	channel.configureBlocking(false);
+	SelectionKey key = channel.register(selector, SelectionKey.OP_READ);
 ```
 #### 3.SelectionKey's
 #### 4.Selecting Channels via a Selector
 #### 5.Full Selector Example
 ```java
-Selector selector = Selector.open();
+	Selector selector = Selector.open();
 
-channel.configureBlocking(false);
+	channel.configureBlocking(false);
 
-SelectionKey key = channel.register(selector, SelectionKey.OP_READ);
-
-
-while(true) {
-
-  int readyChannels = selector.select();
-
-  if(readyChannels == 0) continue;
+	SelectionKey key = channel.register(selector, SelectionKey.OP_READ);
 
 
-  Set<SelectionKey> selectedKeys = selector.selectedKeys();
+	while(true) {
 
-  Iterator<SelectionKey> keyIterator = selectedKeys.iterator();
+	  int readyChannels = selector.select();
 
-  while(keyIterator.hasNext()) {
+	  if(readyChannels == 0) continue;
 
-    SelectionKey key = keyIterator.next();
 
-    if(key.isAcceptable()) {
-        // a connection was accepted by a ServerSocketChannel.
+	  Set<SelectionKey> selectedKeys = selector.selectedKeys();
 
-    } else if (key.isConnectable()) {
-        // a connection was established with a remote server.
+	  Iterator<SelectionKey> keyIterator = selectedKeys.iterator();
 
-    } else if (key.isReadable()) {
-        // a channel is ready for reading
+	  while(keyIterator.hasNext()) {
 
-    } else if (key.isWritable()) {
-        // a channel is ready for writing
-    }
+	    SelectionKey key = keyIterator.next();
 
-    keyIterator.remove();
-  }
-}
+	    if(key.isAcceptable()) {
+		// a connection was accepted by a ServerSocketChannel.
+
+	    } else if (key.isConnectable()) {
+		// a connection was established with a remote server.
+
+	    } else if (key.isReadable()) {
+		// a channel is ready for reading
+
+	    } else if (key.isWritable()) {
+		// a channel is ready for writing
+	    }
+
+	    keyIterator.remove();
+	  }
+	}
 
 ```
 
