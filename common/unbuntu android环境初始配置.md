@@ -22,8 +22,7 @@ category: blog
 ```
 
 ## 二.配置Android SDK
-在配置环境变量时如有不理解请参考如下的说明文档
---[环境变量配置说明](http://www.cnblogs.com/bluestorm/archive/2012/10/12/2721210.html)
+在配置环境变量时如有不理解请参考如下的说明文档[环境变量配置说明](http://www.cnblogs.com/bluestorm/archive/2012/10/12/2721210.html)
 
 ```
 	sudo gedit ~/.profile
