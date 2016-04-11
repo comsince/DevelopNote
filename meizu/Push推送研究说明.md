@@ -416,7 +416,7 @@ init 初始化SDK
 
 * (2)客户端需要自己实现MyPushMessageReceiver，接收Push服务的消息，并实现对消息的处理MyPushMessageReceiver如下代码所示，继承com.meizu.cloud.pushsdk.MzPushMessageReceiver
 
-       public class MyPushMsgReceiver extends MzPushMessageReceiver {
+	public class MyPushMsgReceiver extends MzPushMessageReceiver {
 
 	    @Override
 	    public void onRegister(Context context, String s) {
@@ -461,7 +461,6 @@ init 初始化SDK
 #### 3.3 项目代码初始化
 * 在自定义Application的onCreate方法中调用Push绑定接口
   
-
    PushManager.register(Context context)
 
 
