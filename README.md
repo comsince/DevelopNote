@@ -8,7 +8,7 @@ category: blog
 * [MarkDown 编辑器，推荐使用StackEdit](https://stackedit.io/editor)
 
 ## 关于github博客Markdown注意事项
-* 注意引用代码必须加Tab
+* 代码高亮显示，注意引用代码必须加Tab
 * ```*```必须注意空格行间隔
 
 ## 关于GitHub博客
@@ -30,15 +30,14 @@ category: blog
 ## [Gihuber](http://githuber.cn/)
   这个网站对github上的相关注册账号的贡献进行了排名，可以看看自己的排名，项目的star,fork数直接影响排名
 
-* [技术成长之路](improve.md)
+* [技术成长之路](http://comsince.github.io/person-improve)
   记录个人成长道路上的积累，以促进共勉，砥砺前行！
 
 ## 一. Android
 ### 1.1 通用Android技能说明
 
-* [Fastboot 刷机教程](./common/FastBoot.md)
-* [Android  常见问题解析](./common/AndroidStudioSUseProblem.md)
-* [Unbuntu android 环境初始配置](./common/unbuntu android环境初始配置.md)
+* [Fastboot 刷机教程](http://comsince.github.io/unbuntu-androrid-footboot)
+* [Unbuntu android 环境初始配置](http://comsince.github.io/unbuntu-android-environment)
 * [Android源码在线预览](http://www.grepcode.com/)
 * [Android源码搜索](http://androidxref.com)
 
@@ -46,8 +45,8 @@ category: blog
 #### 1.2.1 Push推送研究
   这里列举当前推送平台的发展趋势以及现有的平台提供的功能，之后会结合上述分析根据实际的经验分析目前我们所采用的push的实现方式
 
-* [第三方推送平台及SDK汇总分析](./meizu)
-* [第三方PushSDK 设计实践](./push/push_design_thirdparty_doc.md)
+* [第三方推送平台及SDK汇总分析](http://comsince.github.io/Push-baidu-getui-compair)
+* [第三方PushSDK 设计实践](http://comsince.github.io/push-design-thirdparty-doc)
 
 #### 1.2.2 数据统计
    这里主要说明数据统计埋点信息的设计原则，以及如果提高数据上报的准确率
@@ -57,15 +56,15 @@ category: blog
 ### 2.1概述
 这里主要说明web开发的发展动向以及一些主流的开发框架
 
-* [分布式Web开发概述](./web/spring_core_framework.md)
+* [分布式Web开发概述](http://comsince.github.io/spring_core_framework)
 
 
 ## 三. 开源项目源码分析与扩展
-具体Android项目的分析说明详见[Android源码解析内容](./Android)
+具体Android项目的分析说明详见[Android源码解析内容](http://comsince.github.io/Android-tech-doc)
 
 ## 四. 设计模式
  关于设计模式从各种开源项目中都能看到，它代表一种解决问题的方案，在众多的开源项目中，如果一开始就知道其实现的思想，对于理解其架构有很大的帮助
 
 * [设计模式说明](./designpattern)
 
-
+## 五. 插件加载APK，实现自动升级
