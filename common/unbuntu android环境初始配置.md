@@ -1,79 +1,88 @@
-##1.配置JDK
+---
+layout: post
+title: "Unbuntu android 环境初始配置"
+description: Unbuntu android 环境初始配置,java environment,Android SDK,ADB 配置，虚拟机安装
+category: blog
+---
+
+## 一.配置JDK
+
 ```
-$sudo gedit /etc/profile
-这里配置的系统环境变量
+	$sudo gedit /etc/profile
+	这里配置的系统环境变量
 ```
 * 配置java environment
+
 ```
-JAVA_HOME=/home/liujicheng/java/jdk1.6.0_12
-export JRE_HOME=/home/liujicheng/java/jdk1.6.0_12/jre
-export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
-export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
+	JAVA_HOME=/home/liujicheng/java/jdk1.6.0_12
+	export JRE_HOME=/home/liujicheng/java/jdk1.6.0_12/jre
+	export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
+	export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
 
 ```
 
-##2.配置Android SDK
+## 二.配置Android SDK
 在配置环境变量时如有不理解请参考如下的说明文档
 --[环境变量配置说明](http://www.cnblogs.com/bluestorm/archive/2012/10/12/2721210.html)
 
 ```
-sudo gedit ~/.profile
-export PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin:/home/cmm/android-sdk-linux/tools:/home/cmm/android-sdk-linux/platform-tools
-$ source ~/.profile
+	sudo gedit ~/.profile
+	export PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin:/home/cmm/android-sdk-linux/tools:/home/cmm/android-sdk-linux/platform-tools
+	$ source ~/.profile
 
 
-这是配置个人环境变量
-android studio 出现无法找到android_home环境变量的问题解决方法：
-配置android_home环境变量
+	这是配置个人环境变量
+	android studio 出现无法找到android_home环境变量的问题解决方法：
+	配置android_home环境变量
 ```
 
 
-##3.ADB 配置
+## 三.ADB 配置
 *  64位系统，Ubuntu11.04，搭建JDK，Android环境，把android SDK复制过来后，里面的adb和其它命令的都不能使用。
 错误提示：android-sdk-linux_86/platform-tools/adb: 没有那个文件或目录。
 解决方案：由于是64bit的系统，而Android sdk只有32bit的程序，需要安装ia32-libs，才能使用。
 
 * 运行如下命令：
 ```
-# apt-get install ia32-libs
+	# apt-get install ia32-libs
 ```
 
 
-##4.魅族手机链接unbutu的问题
+##四.魅族手机链接unbutu的问题
 [具体详见下面的链接](http://jingyan.baidu.com/article/a3761b2ba329571576f9aa09.html)
 
 adb 配置问题可参考内置光盘的内容，注意，在链接的时候一定要选择媒体设备MTP
 
 
-##5.安装虚拟机
-* 5.1 deb安装：
+## 五.安装虚拟机
+### 5.1 deb安装：
 ```
-sudo dpkg -i package.deb
+	sudo dpkg -i package.deb
 ```
 
 
-* 5.2 系统激活
-* 5.3 系统全屏化
+### 5.2 系统激活
+### 5.3 系统全屏化
 如果手动在设置中安装增强功能无效，可以在下面的虚拟光驱中选择VBoxGuestAdditions文件（注意系统是32位还是64位的）点击安装即可
-* 5.4 共享目录设置
+### 5.4 共享目录设置
 
 ```
-VBoxManage sharedfolder add "win-dev" -name "share" -hostpath "/home/liaojinlong/Share"
+	VBoxManage sharedfolder add "win-dev" -name "share" -hostpath "/home/liaojinlong/Share"
 ```
 
 注意：执行此命令时，确保当前运行的虚拟机系统关闭
 win 7 执行一下命令
 ```
-net use z: \\vboxsvr\共享的目录名  这里就是share
+	net use z: \\vboxsvr\共享的目录名  这里就是share
 ```
 如果显示命令执行成功，表示共享目录创建成功
 
-* 5.5 Vmwware 作为独立主机获取局域网ip地址方法
+### 5.5 Vmwware 作为独立主机获取局域网ip地址方法
 其实方法简单，只需要在设置->网络这个选项卡中的连接方式中选择“桥接网卡”，混杂模式选择“允许虚拟电脑”
 这样Vmware虚拟机就会重新获取局域网ip，作为一个独立的主机了
 [具体问题详见此](http://zhidao.baidu.com/link?url=Em-j_y9WCHw306GLsxrU22hr_sq3FIHt7CPRFPvMfrxMH5vSmJO9Oz1NLNt2rVlCOR16OOFfL9yqB0RG_LKBoa)
 
-* 5.6 [windows 远程登录Ubuntu](http://jingyan.baidu.com/article/a501d80cf71bc3ec630f5e0c.html)
+### 5.6 [windows 远程登录Ubuntu](http://jingyan.baidu.com/article/a501d80cf71bc3ec630f5e0c.html)
 
-## 安装Chrome
+## 六. 安装Chrome
 * [Ubuntu 14.04 下安装google的浏览器——Chrome](http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html)
