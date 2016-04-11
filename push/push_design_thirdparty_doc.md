@@ -1,21 +1,31 @@
-# µÚÈı·½PushSDK Éè¼ÆÊµ¼ù
-# Ò». ¸ÅÊö
-   * ¹ØÓÚÍÆËÍµÄµÚÈı·½ÊµÏÖÓÉºÜ¶à£¬°Ù¶ÈÔÆÍÆËÍ£¬¼«¹âÍÆËÍ£¬¸öÍÆ£¬ÓÑÃËÍÆËÍ£¬Ö®Ç°ÒÑ¾­¶ÔÕâ¼¸¸öÍÆËÍµÄ¾ßÌåÔ­ÀíºÍ½ÓÈë·½Ê½ÓĞ¹ıËµÃ÷£¬¾ßÌåÏê¼û[¸÷Æ½Ì¨ÍÆËÍ½ÓÈë·ÖÎö]()
-   * ÍÆËÍ±¾ÖÊ¾ÍÊÇÓëpush·şÎñ±£³ÖÒ»ÖÖÓĞĞ§µÄ³¤Á¬½Ó£¬ÒÔÆÚÊµÊ±½«ÏûÏ¢ÍÆËÍµ½ÊÖ»ú¿Í»§¶Ë£¬±¾ÎÄÒ²½«¶ÔÍÆËÍÊµÏÖµÄ¸÷¸ö»·½ÚÓöµ½µÄÎÊÌâ½øĞĞ·ÖÎö¡£
-   * ¼øÓÚ¸öÈËÕıÔÚÑĞ¾¿ÍÆËÍÏà¹ØµÄÏîÄ¿£¬ËùÒÔÕë¶Ô¾ßÌåµÄÊµÏÖ×öÒ»Ğ©¼òÒªµÄ·ÖÎö
+---
+layout: post
+title: "ç¬¬ä¸‰æ–¹PushSDK è®¾è®¡å®è·µ"
+description: å…³äºæ¨é€çš„ç¬¬ä¸‰æ–¹å®ç°ç”±å¾ˆå¤šï¼Œç™¾åº¦äº‘æ¨é€ï¼Œæå…‰æ¨é€ï¼Œä¸ªæ¨ï¼Œå‹ç›Ÿæ¨é€ï¼Œä¹‹å‰å·²ç»å¯¹è¿™å‡ ä¸ªæ¨é€çš„å…·ä½“åŸç†å’Œæ¥å…¥æ–¹å¼æœ‰è¿‡è¯´æ˜ï¼Œappä¸ºäº†åŠæ—¶è·å–åˆ°æœåŠ¡å™¨ç«¯çš„æ¶ˆæ¯æ›´æ–°ï¼Œä¸€èˆ¬ä¼šé‡‡ç”¨è½®å¯»æˆ–è€…æ¨é€çš„æ–¹å¼æ¥è·å–æ¶ˆæ¯æ›´æ–°ï¼Œè½®å¯»å¯¼è‡´ç»ˆç«¯è®¾å¤‡æµé‡ã€ç”µé‡ã€ç­‰ç³»ç»Ÿèµ„æºä¸¥é‡æµªè´¹ï¼Œæ‰€ä»¥ç›®å‰é‡‡ç”¨çš„æ¯”è¾ƒå¹¿æ³›çš„æ˜¯æ¨é€çš„æ–¹å¼ï¼Œç›®å‰ Meizu çš„ Push SDK ä¸èƒ½è„±ç¦» Flyme OS å­˜åœ¨ï¼Œå½“è¯¥ SDK è„±ç¦» Flyme OS ä¹‹åç”±äºæ²¡æœ‰é•¿é“¾æ¥å¯¼è‡´ä¸èƒ½æ­£å¸¸æ”¶åˆ°æ¨é€æ¶ˆæ¯ã€‚æœ¬ SDK é¦–å…ˆè¦è§£å†³çš„æ—¶é•¿é“¾æ¥ç”± SDK è‡ªå·±ç»´æŠ¤ï¼ŒåŒæ—¶è¿˜è¦è§£å†³çš„å°±æ˜¯å¤šä¸ª app å¼•ç”¨åŒä¸€ä¸ª SDK æ—¶é•¿é“¾æ¥çš„å¤ç”¨é—®é¢˜ã€‚
+category: blog
+---
 
-# ¶ş. ÍÆËÍÓ¦ÓÃ´¦ÀíµÄÎÊÌâ
-±¾²¿·ÖÖ÷ÒªÌÖÂÛSDK¿ª·¢¹ı³ÌÖĞ£¬AndroidÓ¦ÓÃ¼¯³ÉÖĞµÄÎÊÌâ
-## 2.1 SDK¼¯³ÉÎÊÌâ
-SDK¿ª·¢Ö÷ÒªÈÃ¸÷¸öÓ¦ÓÃÒÔ´úÂë¼¯³ÉµÄ·½Ê½½ÓÈë£¬ÔÚ´«Í³µÄ¿ª·ÅÄ£Ê½ÖĞ£¬Ó¦ÓÃÒª½ÓÈëµÚÈı·½SDK£¬±ØÈ»´ø»ØÀ´Ò»Ğ©Ä¬ÈÏµÄÅäÖÃ£¬±ÈÈçAndroidManifest.xmlµÄÅäÖÃ£¬ÈçÏÂ
-```
-<receiver android:name="com.meizu.cloud.PushMsgReceiver">
+
+## ä¸€. æ¦‚è¿°
+   * å…³äºæ¨é€çš„ç¬¬ä¸‰æ–¹å®ç°ç”±å¾ˆå¤šï¼Œç™¾åº¦äº‘æ¨é€ï¼Œæå…‰æ¨é€ï¼Œä¸ªæ¨ï¼Œå‹ç›Ÿæ¨é€ï¼Œä¹‹å‰å·²ç»å¯¹è¿™å‡ ä¸ªæ¨é€çš„å…·ä½“åŸç†å’Œæ¥å…¥æ–¹å¼æœ‰è¿‡è¯´æ˜ï¼Œå…·ä½“è¯¦è§[å„å¹³å°æ¨é€æ¥å…¥åˆ†æ]()
+   * æ¨é€æœ¬è´¨å°±æ˜¯ä¸pushæœåŠ¡ä¿æŒä¸€ç§æœ‰æ•ˆçš„é•¿è¿æ¥ï¼Œä»¥æœŸå®æ—¶å°†æ¶ˆæ¯æ¨é€åˆ°æ‰‹æœºå®¢æˆ·ç«¯ï¼Œæœ¬æ–‡ä¹Ÿå°†å¯¹æ¨é€å®ç°çš„å„ä¸ªç¯èŠ‚é‡åˆ°çš„é—®é¢˜è¿›è¡Œåˆ†æã€‚
+   * é‰´äºä¸ªäººæ­£åœ¨ç ”ç©¶æ¨é€ç›¸å…³çš„é¡¹ç›®ï¼Œæ‰€ä»¥é’ˆå¯¹å…·ä½“çš„å®ç°åšä¸€äº›ç®€è¦çš„åˆ†æ
+
+## äºŒ. æ¨é€åº”ç”¨å¤„ç†çš„é—®é¢˜
+
+æœ¬éƒ¨åˆ†ä¸»è¦è®¨è®ºSDKå¼€å‘è¿‡ç¨‹ä¸­ï¼ŒAndroidåº”ç”¨é›†æˆä¸­çš„é—®é¢˜
+
+### 2.1 SDKé›†æˆé—®é¢˜
+
+SDKå¼€å‘ä¸»è¦è®©å„ä¸ªåº”ç”¨ä»¥ä»£ç é›†æˆçš„æ–¹å¼æ¥å…¥ï¼Œåœ¨ä¼ ç»Ÿçš„å¼€æ”¾æ¨¡å¼ä¸­ï¼Œåº”ç”¨è¦æ¥å…¥ç¬¬ä¸‰æ–¹SDKï¼Œå¿…ç„¶å¸¦å›æ¥ä¸€äº›é»˜è®¤çš„é…ç½®ï¼Œæ¯”å¦‚AndroidManifest.xmlçš„é…ç½®ï¼Œå¦‚ä¸‹
+
+       <receiver android:name="com.meizu.cloud.PushMsgReceiver">
             <intent-filter>
-                <!-- ½ÓÊÕpushÏûÏ¢ -->
+                <!-- æ¥æ”¶pushæ¶ˆæ¯ -->
                 <action android:name="com.meizu.flyme.push.intent.MESSAGE" />
-                <!-- ½ÓÊÕregisterÏûÏ¢-->
+                <!-- æ¥æ”¶registeræ¶ˆæ¯-->
                 <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK"/>
-                <!-- ½ÓÊÕunregisterÏûÏ¢-->
+                <!-- æ¥æ”¶unregisteræ¶ˆæ¯-->
                 <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK"/>
                 <action android:name="com.meizu.c2dm.intent.REGISTRATION" />
                 <action android:name="com.meizu.c2dm.intent.RECEIVE" />
@@ -23,269 +33,291 @@ SDK¿ª·¢Ö÷ÒªÈÃ¸÷¸öÓ¦ÓÃÒÔ´úÂë¼¯³ÉµÄ·½Ê½½ÓÈë£¬ÔÚ´«Í³µÄ¿ª·ÅÄ£Ê½ÖĞ£¬Ó¦ÓÃÒª½ÓÈëµÚÈı·½S
             </intent-filter>
 
         </receiver>
-```
 
-³ıÁËÒÔÉÏµÄÎÊÌâÍâ£¬SDK½ÓÈëÓĞ¿ÉÄÜ°üÀ¨µÚÈı·½so¿âµÄ¼¯³É£¬ÕâĞ©¶¼ĞèÒªÓÃ»§ÊÖ¶¯µ¼Èë£¬¼øÓÚÒÔÉÏ¸øµÚÈı·½Ó¦ÓÃ´øÀ´¼«´óÀ§ÈÅµÄ¼¯³É·½Ê½£¬ÎÒÃÇÑ¡ÔñaarµÄ¼¯³É·½Ê½
+é™¤äº†ä»¥ä¸Šçš„é—®é¢˜å¤–ï¼ŒSDKæ¥å…¥æœ‰å¯èƒ½åŒ…æ‹¬ç¬¬ä¸‰æ–¹soåº“çš„é›†æˆï¼Œè¿™äº›éƒ½éœ€è¦ç”¨æˆ·æ‰‹åŠ¨å¯¼å…¥ï¼Œé‰´äºä»¥ä¸Šç»™ç¬¬ä¸‰æ–¹åº”ç”¨å¸¦æ¥æå¤§å›°æ‰°çš„é›†æˆæ–¹å¼ï¼Œæˆ‘ä»¬é€‰æ‹©aarçš„é›†æˆæ–¹å¼
 
-* ½â¾ö·½°¸
- Ä¿Ç°ÎÒÃÇÈ«²¿²ÉÓÃGradleµÄ±àÒë·½Ê½£¬ËùÓĞµÄÀà¿â¶¼²ÉÓÃAndroid Studio library¹¤³ÌµÄÄ¿Â¼½á¹¹½øĞĞ×éÖ¯£¬ÕâÑù×öµÄºÃ´¦°üÀ¨£¬Android¿ª·¢Ó¦ÓÃÎŞĞè¹ØĞÄso¿â£¬AndroidManifest¼¯³É£¬proguard»ìÏıÎÊÌâ£¬Ó¦ÓÃÖ»ĞèÒªÓ¦ÓÃaar°ü¾Í¿ÉÒÔ£¬Í¬Ê±aar°üÒ²¿ÉÒÔ·¢²¼µ½artifactoryÉÏ£¬ÕâÑùÓ¦ÓÃ¾Í¿ÉÒÔÏñÏÂÃæµÄ·½Ê½ÒıÓÃ¼´¿É£º
+* è§£å†³æ–¹æ¡ˆ
 
-```
-    compile 'com.meizu.cloud.pushsdk:open:3.0.2-beta@aar'
-    proguard 'com.meizu.cloud.pushsdk:open:3.0.2-beta@pro'
-    compile 'com.meizu.cloud.pushsdk:internal:3.0.3-beta@aar'
-    proguard 'com.meizu.cloud.pushsdk:internal:3.0.3-beta@pro'
-```
+ ç›®å‰æˆ‘ä»¬å…¨éƒ¨é‡‡ç”¨Gradleçš„ç¼–è¯‘æ–¹å¼ï¼Œæ‰€æœ‰çš„ç±»åº“éƒ½é‡‡ç”¨Android Studio libraryå·¥ç¨‹çš„ç›®å½•ç»“æ„è¿›è¡Œç»„ç»‡ï¼Œè¿™æ ·åšçš„å¥½å¤„åŒ…æ‹¬ï¼ŒAndroidå¼€å‘åº”ç”¨æ— éœ€å…³å¿ƒsoåº“ï¼ŒAndroidManifesté›†æˆï¼Œproguardæ··æ·†é—®é¢˜ï¼Œåº”ç”¨åªéœ€è¦åº”ç”¨aaråŒ…å°±å¯ä»¥ï¼ŒåŒæ—¶aaråŒ…ä¹Ÿå¯ä»¥å‘å¸ƒåˆ°artifactoryä¸Šï¼Œè¿™æ ·åº”ç”¨å°±å¯ä»¥åƒä¸‹é¢çš„æ–¹å¼å¼•ç”¨å³å¯ï¼š
+
+	    compile 'com.meizu.cloud.pushsdk:open:3.0.2-beta@aar'
+	    proguard 'com.meizu.cloud.pushsdk:open:3.0.2-beta@pro'
+	    compile 'com.meizu.cloud.pushsdk:internal:3.0.3-beta@aar'
+	    proguard 'com.meizu.cloud.pushsdk:internal:3.0.3-beta@pro'
 
 
-## 2.1 SDKµ¥½ø³Ìµ¥ServiceÊµÏÖ
-### 2.1.1 Í¨µÀÁ¬½ÓµÄ³Ö¾ÃĞÔ
-  SDKĞèÒªÓëpush·şÎñ±£³Ö³¤Á¬½Ó£¬Ò»ÖÖÆÕ±éµÄ×ö·¨ÊÇ²ÉÓÃAndroid ServiceµÄ·½Ê½³£×¤£¬ÕâÑù¾ÍÄÜ±£Ö¤SDKÓëpush·şÎñ±£³ÖÒ»ÖÖ³¤¾ÃµÄÁ¬½Ó
-### 2.1.2 Í¨µÀµÄÎ¨Ò»ĞÔ±£Ö¤
-  ³öÓÚ¶ÔÊÖ»úµçÁ¿µÄ¿¼ÂÇÒÔ¼°push·şÎñÆ÷µÄ³ĞÔØÄÜÁ¦£¬Ò»°ãÇé¿öPushServiceÒ»°ãÔÚÒ»Ì¨ÊÖ»úÉÏÖ»ÄÜÄ¬ÈÏ¹ÒÔØµ½Ò»¸öÓ¦ÓÃÉÏ£¬Ö»ÓĞÕâÑù²ÅÄÜ±£³ÖServiceµÄÎ¨Ò»ĞÔ
 
-```
-Intent pushServiceIntent = new Intent(PushConstants.MZ_PUSH_ON_START_PUSH_REGISTER);
-pushServiceIntent.setClassName(context.getPackageName(),"com.meizu.cloud.pushsdk.pushservice.MzPushService");
-pushServiceIntent.putExtra(PushConstants.REGISTER_PACKAGE_NAME,context.getPackageName());
-context.startService(pushServiceIntent);
-```
+### 2.1 SDKå•è¿›ç¨‹å•Serviceå®ç°
+
+#### 2.1.1 é€šé“è¿æ¥çš„æŒä¹…æ€§
+
+  SDKéœ€è¦ä¸pushæœåŠ¡ä¿æŒé•¿è¿æ¥ï¼Œä¸€ç§æ™®éçš„åšæ³•æ˜¯é‡‡ç”¨Android Serviceçš„æ–¹å¼å¸¸é©»ï¼Œè¿™æ ·å°±èƒ½ä¿è¯SDKä¸pushæœåŠ¡ä¿æŒä¸€ç§é•¿ä¹…çš„è¿æ¥
+
+#### 2.1.2 é€šé“çš„å”¯ä¸€æ€§ä¿è¯
+
+  å‡ºäºå¯¹æ‰‹æœºç”µé‡çš„è€ƒè™‘ä»¥åŠpushæœåŠ¡å™¨çš„æ‰¿è½½èƒ½åŠ›ï¼Œä¸€èˆ¬æƒ…å†µPushServiceä¸€èˆ¬åœ¨ä¸€å°æ‰‹æœºä¸Šåªèƒ½é»˜è®¤æŒ‚è½½åˆ°ä¸€ä¸ªåº”ç”¨ä¸Šï¼Œåªæœ‰è¿™æ ·æ‰èƒ½ä¿æŒServiceçš„å”¯ä¸€æ€§
+
+
+	Intent pushServiceIntent = new Intent(PushConstants.MZ_PUSH_ON_START_PUSH_REGISTER);
+	pushServiceIntent.setClassName(context.getPackageName(),"com.meizu.cloud.pushsdk.pushservice.MzPushService");
+	pushServiceIntent.putExtra(PushConstants.REGISTER_PACKAGE_NAME,context.getPackageName());
+	context.startService(pushServiceIntent);
+
  
-### 2.1.3 PushService°üÃûÑ¡Ôñ
-ÒÔÉÏÌÖÂÛÁËpush·şÎñµÄÎ¨Ò»ĞÔ£¬Î¨Ò»ĞÔ±ØÈ»½â¾öµÄÎÊÌâÊÇ¸ÄPushService¹ÒÔØÔÚÄÄÒ»¸ö°üÃûÏÂ£¬ÔÚFlyme¼¯³ÉµÄÏÂ£¬Õâ¸öservice×é¼şÊÇÄ¬ÈÏÓĞÔÆ·şÎñ¹ÒÔØ£¬ËùÒÔÔÚFlymeÉÏËùÓĞ½ÓÈëµÄpushµÄÓ¦ÓÃµÄÏûÏ¢¶¼»á´ÓÕâ¸öServiceÊÕµ½×ª·¢ÏûÏ¢
+#### 2.1.3 PushServiceåŒ…åé€‰æ‹©
 
-### 2.1.4 µÚÈı·½ROMÊÊÅäÎÊÌâ
-  PushSDKÓÉÓÚ»¹ÒªÊÊÅäµÚÈı·½ROM£¬¾Í±ØÈ»ÃæÁÙµÚÈı·½SDKËùÃæÁÙµÄÎÊÌâ£¬µ±ËùÓĞ¼¯³ÉpushSDKµÄÓ¦ÓÃÍ¬Ê±ÔËĞĞÔÚÒ»¸öÊÖ»úÉÏ£¬ÎÒÃÇ±ØÈ»ÓĞÒ»ÖÖÓÅÏÈ¼¶Ëã·¨¾öPushServiceµ½µ×¹ÒÔØÔÚÄÄ¸öÓ¦ÓÃÖ®ÉÏ
+ä»¥ä¸Šè®¨è®ºäº†pushæœåŠ¡çš„å”¯ä¸€æ€§ï¼Œå”¯ä¸€æ€§å¿…ç„¶è§£å†³çš„é—®é¢˜æ˜¯æ”¹PushServiceæŒ‚è½½åœ¨å“ªä¸€ä¸ªåŒ…åä¸‹ï¼Œåœ¨Flymeé›†æˆçš„ä¸‹ï¼Œè¿™ä¸ªserviceç»„ä»¶æ˜¯é»˜è®¤æœ‰äº‘æœåŠ¡æŒ‚è½½ï¼Œæ‰€ä»¥åœ¨Flymeä¸Šæ‰€æœ‰æ¥å…¥çš„pushçš„åº”ç”¨çš„æ¶ˆæ¯éƒ½ä¼šä»è¿™ä¸ªServiceæ”¶åˆ°è½¬å‘æ¶ˆæ¯
 
-* ½â¾ö·½°¸
-ÎÒÃÇ²ÉÓÃµÄ³õ¼¶·½°¸ÊÇ¸ù¾İÓ¦ÓÃµÄ°üÃûµÄË³ĞòÓÅÏÈ¼¶×î¸ßµÄÓ¦ÓÃÆô¶¯¸ÃÓ¦ÓÃÏÂµÄPushService£¬µ±È»ÎªÁË·ÀÖ¹¶ñÒâµÄÎ±Ôìservice£¬ÎÒÃÇ»¹½¨Á¢ÁËPushServiceÖ®¼äµÄÏà»¥Ğ£Ñé¹æÔò
+#### 2.1.4 ç¬¬ä¸‰æ–¹ROMé€‚é…é—®é¢˜
 
-## 2.2 Ó¦ÓÃÏûÏ¢µ½´ïÂÊ
-ÌáÉıÏûÏ¢µ½´ïÂÊ£¬±£Ö¤ÏûÏ¢×¼È·µ½Ó¦ÓÃ
-* ·¢ËÍ´¿¹ã²¥
-  Í¨¹ı¹ã²¥´«µİÏûÏ¢ÓĞ¿ÉÄÜÓ¦ÓÃÍË³öÖ®ºóÎŞ·¨ÊÕµ½¹ã²¥ÏûÏ¢
-* Í¨µÀService×ª·¢ÏûÏ¢
-  ÎªÁË½â¾öµ¥´¿µÄ¹ã²¥×ª·¢ÏûÏ¢£¬ÎÒÃÇÉè¼ÆÒ»ÖÖÍ¨¹ıService×ª·¢ÏûÏ¢µÄ°ì·¨£¬ÕâÑù°ì·¨ÔÚ°Ù¶ÈÔÆÍÆËÍÉÏÒ²Ê¹ÓÃ¹ı£¬¾ßÌå×ö·¨ÈçÏÂ£º
+  PushSDKç”±äºè¿˜è¦é€‚é…ç¬¬ä¸‰æ–¹ROMï¼Œå°±å¿…ç„¶é¢ä¸´ç¬¬ä¸‰æ–¹SDKæ‰€é¢ä¸´çš„é—®é¢˜ï¼Œå½“æ‰€æœ‰é›†æˆpushSDKçš„åº”ç”¨åŒæ—¶è¿è¡Œåœ¨ä¸€ä¸ªæ‰‹æœºä¸Šï¼Œæˆ‘ä»¬å¿…ç„¶æœ‰ä¸€ç§ä¼˜å…ˆçº§ç®—æ³•å†³PushServiceåˆ°åº•æŒ‚è½½åœ¨å“ªä¸ªåº”ç”¨ä¹‹ä¸Š
 
-```
-  Í¨¹ıµ÷ÓÃNotificationService->·´ÉäReceiverµÄOnReceive·½·¨
-```
-  ÓĞÊ±¿ÉÒÔ·½Ê½ÕâÖÖ·½Ê½³öÏÖÒì³££¬¿ÉÒÔ½áºÏ¹ã²¥µÄ·½Ê½¹²Í¬Ê¹ÓÃ£¬±£Ö¤ÏûÏ¢µ½´ïÂÊ
+* è§£å†³æ–¹æ¡ˆ
+æˆ‘ä»¬é‡‡ç”¨çš„åˆçº§æ–¹æ¡ˆæ˜¯æ ¹æ®åº”ç”¨çš„åŒ…åçš„é¡ºåºä¼˜å…ˆçº§æœ€é«˜çš„åº”ç”¨å¯åŠ¨è¯¥åº”ç”¨ä¸‹çš„PushServiceï¼Œå½“ç„¶ä¸ºäº†é˜²æ­¢æ¶æ„çš„ä¼ªé€ serviceï¼Œæˆ‘ä»¬è¿˜å»ºç«‹äº†PushServiceä¹‹é—´çš„ç›¸äº’æ ¡éªŒè§„åˆ™
 
-ÒÔÏÂÊÇNotificationServcieµÄ´úÂë:
-```
-package com.meizu.cloud.pushsdk;
+### 2.2 åº”ç”¨æ¶ˆæ¯åˆ°è¾¾ç‡
 
-import android.app.IntentService;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
-import android.text.TextUtils;
-import android.util.Log;
+æå‡æ¶ˆæ¯åˆ°è¾¾ç‡ï¼Œä¿è¯æ¶ˆæ¯å‡†ç¡®åˆ°åº”ç”¨
 
+* å‘é€çº¯å¹¿æ’­
+  é€šè¿‡å¹¿æ’­ä¼ é€’æ¶ˆæ¯æœ‰å¯èƒ½åº”ç”¨é€€å‡ºä¹‹åæ— æ³•æ”¶åˆ°å¹¿æ’­æ¶ˆæ¯
 
-import com.meizu.cloud.pushsdk.util.DebugLogger;
-
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
-import java.util.List;
-
-/**
- * Created by comsince on 15-6-16.
- */
-public class NotificationService extends IntentService {
-    private final static String TAG = "NotificationService";
-
-    public NotificationService(String name) {
-        super(name);
-    }
-
-    public NotificationService(){
-        super(TAG);
-    }
-
-    @Override
-    public void onDestroy() {
-        Log.i(TAG, "NotificationService destroy");
-        super.onDestroy();
-    }
-
-    @Override
-    protected void onHandleIntent(Intent intent) {
-        if(intent != null){
-            DebugLogger.i(TAG, "onHandleIntentaction " + intent.getAction());
-            String commandType = intent.getStringExtra("command_type");
-            DebugLogger.d("NotificationService", "-- command_type -- " + commandType);
-            if(!TextUtils.isEmpty(commandType) && commandType.equals("reflect_receiver")) {
-                this.reflectReceiver(intent);
-            }
-        }
-
-    }
-
-    @Override
-    public boolean onUnbind(Intent intent) {
-        return super.onUnbind(intent);
-    }
-
-    public String getReceiver(String var1, String var2) {
-        if(!TextUtils.isEmpty(var1) && !TextUtils.isEmpty(var2)) {
-            String var3 = null;
-            List var4;
-            Intent var5 = new Intent(var2);
-            var5.setPackage(var1);
-            PackageManager var6 = this.getPackageManager();
-            var4 = var6.queryBroadcastReceivers(var5, 0);
-            if(var4 != null && var4.size() > 0) {
-                var3 = ((ResolveInfo)var4.get(0)).activityInfo.name;
-            }
-            return var3;
-        } else {
-            return null;
-        }
-    }
-
-    public void reflectReceiver(Intent intent) {
-        String receiver = this.getReceiver(this.getPackageName(), intent.getAction());
-        if(TextUtils.isEmpty(receiver)) {
-            Log.i("NotificationService", " reflectReceiver error: receiver for: " + intent.getAction() + " not found, package: " + this.getPackageName());
-            intent.setPackage(this.getPackageName());
-            this.sendBroadcast(intent);
-        } else {
-            try {
-                Class receiverClass = Class.forName(receiver);
-                Constructor receiverClassConstructor = receiverClass.getConstructor((Class[])null);
-                Object newInstance = receiverClassConstructor.newInstance((Object[])null);
-                Class[] var7 = new Class[]{Context.class, Intent.class};
-                Method onReceive = receiverClass.getMethod("onReceive", var7);
-                intent.setClassName(this.getPackageName(), receiver);
-                Object[] params = new Object[]{this.getApplicationContext(), intent};
-                onReceive.invoke(newInstance, params);
-            } catch (Exception var11) {
-                Log.i("NotificationService", "reflect e: " + var11);
-            }
-
-        }
-    }
-}
+* é€šé“Serviceè½¬å‘æ¶ˆæ¯
+  ä¸ºäº†è§£å†³å•çº¯çš„å¹¿æ’­è½¬å‘æ¶ˆæ¯ï¼Œæˆ‘ä»¬è®¾è®¡ä¸€ç§é€šè¿‡Serviceè½¬å‘æ¶ˆæ¯çš„åŠæ³•ï¼Œè¿™æ ·åŠæ³•åœ¨ç™¾åº¦äº‘æ¨é€ä¸Šä¹Ÿä½¿ç”¨è¿‡ï¼Œå…·ä½“åšæ³•å¦‚ä¸‹ï¼š
 
 ```
-# Èı. Push×Ô¶¨Òå¶ş½øÖÆĞ­Òé
-## 3.1 PushÏûÏ¢¶¨Òå
-ÕâÀïÎÒÃÇ²ÉÓÃprotobuf¶¨ÒåĞ­Òé¸ñÊ½
+  é€šè¿‡è°ƒç”¨NotificationService->åå°„Receiverçš„OnReceiveæ–¹æ³•
+```
+  æœ‰æ—¶å¯ä»¥æ–¹å¼è¿™ç§æ–¹å¼å‡ºç°å¼‚å¸¸ï¼Œå¯ä»¥ç»“åˆå¹¿æ’­çš„æ–¹å¼å…±åŒä½¿ç”¨ï¼Œä¿è¯æ¶ˆæ¯åˆ°è¾¾ç‡
 
-```
-message NotifyBody
-{
-    required string app     = 1;
-    required string body = 2;
-    optional string ext = 3;  //À©Õ¹ĞÅÏ¢(json¸ñÊ½){"ct1":{"pushType":"0"}, "statics":{"taskId":"123456"}, ...}
-};
-```
-Ğ­ÒéµÄ¶¨Òå±£Ö¤ÁË¿Í»§¶ËÓë·şÎñÆ÷µÄÍ¨ĞÅ¿É¿¿ĞÔ£¬ÎªÁË±£Ö¤ÍÆËÍµÄ×¼È·ÊµÊ±µ½´ï£¬¶ÔÓÚÃ¿Ò»ÌõÊÕµ½µÄÍÆËÍÏûÏ¢£¬ÊÕµ½Ö®ºó¶¼ÒªÏòpush·şÎñÆ÷±¨¸æÏûÏ¢½ÓÊÕ³É¹¦
+ä»¥ä¸‹æ˜¯NotificationServcieçš„ä»£ç :
 
-Í¼ÒÔºó²¹ÉÏ
+	package com.meizu.cloud.pushsdk;
 
-# ËÄ. ³¤Á¬½Ó±£³Ö´¦Àí·½°¸
-## 4.1 ×¼±¸¹¤×÷
-   ÔÚ¿Í»§¶ËÁ¬½Ó·şÎñ¶ËÖ®Ç°·şÎñÆ÷µÄÑ¡ÔñÎÊÌâ£¬¶ÏÏßÖØÁ¬ÎÊÌâ
-## 4.2 ÖØ¶¨Ïò
-   ÇëÇópush·şÎñÆ÷µØÖ·ÁĞ±í£¬±ãÓÚ½øĞĞ·şÎñÆ÷Ñ¡È¡
-## 4.3 ·şÎñÆ÷ÓÅÏÈ¼¶Ñ¡Ôñ
-   ½øĞĞ·şÎñÆ÷µÄÅÜÂíÑ¡Ôñ£¬È·¶¨×îÓÅµÄ·şÎñÆ÷Á¬½ÓµØÖ·£¬¿ÉÄÜÓĞÍøÂç»·¾³ÓĞ¹Ø£¬°üÀ¨Êı¾İÍøÂçÀàĞÍ£ºWifi,4G
-## 4.4 ¶ÏÏßÖØÁ¬»úÖÆ
-   ÔÚ·şÎñÆ÷ĞÄÌøÁ¬½Ó¹ı³ÌÖĞ£¬¿ÉÄÜ³öÏÖÍøÂçÖĞ¶Ï£¬ÓĞ±ØÒªÉè¼ÆÍøÂçÖØÁ¬»úÖÆ¡£ÍøÂç×´Ì¬µÄ±ä¸ü±ØĞë´Ù·¢ĞÂµÄÁ¬½ÓÇëÇó
-## 4.5 ¼øÈ¨
-   Óë·şÎñÆ÷½¨Á¢Á¬½ÓÖ®ºó£¬¿ªÊ¼½øĞĞ¼øÈ¨£¬È·ÈÏ¸ÃÉè±¸µÄÁ¬½ÓµÄºÏ·¨ĞÔ£¬Ö»ÓĞ¼øÈ¨³É¹¦ºó£¬Ó¦ÓÃ²Å¿ÉÄÜ³É¹¦·¢Æğ×¢²á£¬²¢½ÓÊÕÍÆËÍÏûÏ¢
-## 4.6 ĞÄÌøÉè¼Æ
-   ĞÄÌøµÄÉè¼ÆÖ÷ÒªÊÇ±£³ÖÍ¨µÀµÄ³©Í¨ĞÔ£¬ÒÔÈ·±£ÔÚÍÆËÍÏûÏ¢µ½´ïºóÄÜ¹»Í¨¹ı´ËÍ¨µÀË³ÀûµÄµ½´ïÊÖ»ú¶Ë
+	import android.app.IntentService;
+	import android.content.Context;
+	import android.content.Intent;
+	import android.content.pm.PackageManager;
+	import android.content.pm.ResolveInfo;
+	import android.text.TextUtils;
+	import android.util.Log;
 
-### 4.6.1 Æô¶¯Ê±»ú
-  Í¨µÀÁ¬½Ó³É¹¦ºó£¬Æô¶¯ĞÄÌøÁ¬½Ó
-### 4.6.2 ĞÄÌø³õÊ¼¼ä¸ô²ßÂÔ
-  mMin: ×îĞ¡¼ä¸ô
-  mMax: ×î´ó¼ä¸ô
-  mInternal: ³õÊ¼ĞÄÌø¼ä¸ô = mMin + (mMax-mMin)>>3
-### 4.6.3 ĞÄÌø¼ä¸ô²½½ø²½¼õ²ßÂÔ
 
-  * ²½¼õÌõ¼ş
-  ³¬Ê±»ØÓ¦£º¹æ¶¨Ê±¼äÄÚÃ»ÓĞÊÕµ½ping»ØÓ¦ÏûÏ¢
-  ĞÄÌø·¢ËÍÊ§°Ü£ºÎŞ·¨¶ÁÈ¡·şÎñµÄping»ØÓ¦ÏûÏ¢£¬ÔİÍ£·¢ËÍĞÄÌø
-```
-  mMin = 180 (ÖØÖÃ)
-  mMax = mInternal
-  mInternal -= (mMax-mMin)>>>2
-```
-  
-  * ĞÄÌø²½ÔöÌõ¼ş
+	import com.meizu.cloud.pushsdk.util.DebugLogger;
 
-  ĞÄÌø·¢ËÍ³É¹¦£ºtimesOK++
-++mTimesOk >= mInterval / 100 * 2
-  timesOK: ĞÄÌø·¢ËÍ³É¹¦ÊıÁ¿
-```
-  mMin = mInternal
-  mInternal =+ (mMax-mMin)>>2
-```
-*NOTE: ÒÔÏÂÊÇ²½ÔöËã·¨Ê¾Àı´úÂë*
-```
-public void print(){
-		int min = 180;
-		int max = 890;
-		int mInternal = 180+((max-min)>>3);
-		System.out.println("max="+max+" min="+min+" mInternal="+mInternal);
-		while(max>mInternal){
-			int step = (max-min)>>3;
-			min = mInternal;
-			mInternal += step;
-			System.out.println("step="+step+" max="+max+" min="+min+" mInternal="+mInternal+" minute = "+mInternal/60+"·Ö");
-			if(step == 0){
-				break;
+	import java.lang.reflect.Constructor;
+	import java.lang.reflect.Method;
+	import java.util.List;
+
+	/**
+	 * Created by comsince on 15-6-16.
+	 */
+	public class NotificationService extends IntentService {
+	    private final static String TAG = "NotificationService";
+
+	    public NotificationService(String name) {
+		super(name);
+	    }
+
+	    public NotificationService(){
+		super(TAG);
+	    }
+
+	    @Override
+	    public void onDestroy() {
+		Log.i(TAG, "NotificationService destroy");
+		super.onDestroy();
+	    }
+
+	    @Override
+	    protected void onHandleIntent(Intent intent) {
+		if(intent != null){
+		    DebugLogger.i(TAG, "onHandleIntentaction " + intent.getAction());
+		    String commandType = intent.getStringExtra("command_type");
+		    DebugLogger.d("NotificationService", "-- command_type -- " + commandType);
+		    if(!TextUtils.isEmpty(commandType) && commandType.equals("reflect_receiver")) {
+			this.reflectReceiver(intent);
+		    }
+		}
+
+	    }
+
+	    @Override
+	    public boolean onUnbind(Intent intent) {
+		return super.onUnbind(intent);
+	    }
+
+	    public String getReceiver(String var1, String var2) {
+		if(!TextUtils.isEmpty(var1) && !TextUtils.isEmpty(var2)) {
+		    String var3 = null;
+		    List var4;
+		    Intent var5 = new Intent(var2);
+		    var5.setPackage(var1);
+		    PackageManager var6 = this.getPackageManager();
+		    var4 = var6.queryBroadcastReceivers(var5, 0);
+		    if(var4 != null && var4.size() > 0) {
+			var3 = ((ResolveInfo)var4.get(0)).activityInfo.name;
+		    }
+		    return var3;
+		} else {
+		    return null;
+		}
+	    }
+
+	    public void reflectReceiver(Intent intent) {
+		String receiver = this.getReceiver(this.getPackageName(), intent.getAction());
+		if(TextUtils.isEmpty(receiver)) {
+		    Log.i("NotificationService", " reflectReceiver error: receiver for: " + intent.getAction() + " not found, package: " + this.getPackageName());
+		    intent.setPackage(this.getPackageName());
+		    this.sendBroadcast(intent);
+		} else {
+		    try {
+			Class receiverClass = Class.forName(receiver);
+			Constructor receiverClassConstructor = receiverClass.getConstructor((Class[])null);
+			Object newInstance = receiverClassConstructor.newInstance((Object[])null);
+			Class[] var7 = new Class[]{Context.class, Intent.class};
+			Method onReceive = receiverClass.getMethod("onReceive", var7);
+			intent.setClassName(this.getPackageName(), receiver);
+			Object[] params = new Object[]{this.getApplicationContext(), intent};
+			onReceive.invoke(newInstance, params);
+		    } catch (Exception var11) {
+			Log.i("NotificationService", "reflect e: " + var11);
+		    }
+
+		}
+	    }
+	}
+
+
+## ä¸‰. Pushè‡ªå®šä¹‰äºŒè¿›åˆ¶åè®®
+
+### 3.1 Pushæ¶ˆæ¯å®šä¹‰
+
+è¿™é‡Œæˆ‘ä»¬é‡‡ç”¨protobufå®šä¹‰åè®®æ ¼å¼
+
+
+	message NotifyBody
+	{
+	    required string app     = 1;
+	    required string body = 2;
+	    optional string ext = 3;  //æ‰©å±•ä¿¡æ¯(jsonæ ¼å¼){"ct1":{"pushType":"0"}, "statics":{"taskId":"123456"}, ...}
+	};
+
+åè®®çš„å®šä¹‰ä¿è¯äº†å®¢æˆ·ç«¯ä¸æœåŠ¡å™¨çš„é€šä¿¡å¯é æ€§ï¼Œä¸ºäº†ä¿è¯æ¨é€çš„å‡†ç¡®å®æ—¶åˆ°è¾¾ï¼Œå¯¹äºæ¯ä¸€æ¡æ”¶åˆ°çš„æ¨é€æ¶ˆæ¯ï¼Œæ”¶åˆ°ä¹‹åéƒ½è¦å‘pushæœåŠ¡å™¨æŠ¥å‘Šæ¶ˆæ¯æ¥æ”¶æˆåŠŸ
+
+å›¾ä»¥åè¡¥ä¸Š
+
+## å››. é•¿è¿æ¥ä¿æŒå¤„ç†æ–¹æ¡ˆ
+
+### 4.1 å‡†å¤‡å·¥ä½œ
+
+   åœ¨å®¢æˆ·ç«¯è¿æ¥æœåŠ¡ç«¯ä¹‹å‰æœåŠ¡å™¨çš„é€‰æ‹©é—®é¢˜ï¼Œæ–­çº¿é‡è¿é—®é¢˜
+
+### 4.2 é‡å®šå‘
+
+   è¯·æ±‚pushæœåŠ¡å™¨åœ°å€åˆ—è¡¨ï¼Œä¾¿äºè¿›è¡ŒæœåŠ¡å™¨é€‰å–
+### 4.3 æœåŠ¡å™¨ä¼˜å…ˆçº§é€‰æ‹©
+
+   è¿›è¡ŒæœåŠ¡å™¨çš„è·‘é©¬é€‰æ‹©ï¼Œç¡®å®šæœ€ä¼˜çš„æœåŠ¡å™¨è¿æ¥åœ°å€ï¼Œå¯èƒ½æœ‰ç½‘ç»œç¯å¢ƒæœ‰å…³ï¼ŒåŒ…æ‹¬æ•°æ®ç½‘ç»œç±»å‹ï¼šWifi,4G
+### 4.4 æ–­çº¿é‡è¿æœºåˆ¶
+
+   åœ¨æœåŠ¡å™¨å¿ƒè·³è¿æ¥è¿‡ç¨‹ä¸­ï¼Œå¯èƒ½å‡ºç°ç½‘ç»œä¸­æ–­ï¼Œæœ‰å¿…è¦è®¾è®¡ç½‘ç»œé‡è¿æœºåˆ¶ã€‚ç½‘ç»œçŠ¶æ€çš„å˜æ›´å¿…é¡»ä¿ƒå‘æ–°çš„è¿æ¥è¯·æ±‚
+### 4.5 é‰´æƒ
+
+   ä¸æœåŠ¡å™¨å»ºç«‹è¿æ¥ä¹‹åï¼Œå¼€å§‹è¿›è¡Œé‰´æƒï¼Œç¡®è®¤è¯¥è®¾å¤‡çš„è¿æ¥çš„åˆæ³•æ€§ï¼Œåªæœ‰é‰´æƒæˆåŠŸåï¼Œåº”ç”¨æ‰å¯èƒ½æˆåŠŸå‘èµ·æ³¨å†Œï¼Œå¹¶æ¥æ”¶æ¨é€æ¶ˆæ¯
+### 4.6 å¿ƒè·³è®¾è®¡
+
+   å¿ƒè·³çš„è®¾è®¡ä¸»è¦æ˜¯ä¿æŒé€šé“çš„ç•…é€šæ€§ï¼Œä»¥ç¡®ä¿åœ¨æ¨é€æ¶ˆæ¯åˆ°è¾¾åèƒ½å¤Ÿé€šè¿‡æ­¤é€šé“é¡ºåˆ©çš„åˆ°è¾¾æ‰‹æœºç«¯
+
+#### 4.6.1 å¯åŠ¨æ—¶æœº
+
+  é€šé“è¿æ¥æˆåŠŸåï¼Œå¯åŠ¨å¿ƒè·³è¿æ¥
+#### 4.6.2 å¿ƒè·³åˆå§‹é—´éš”ç­–ç•¥
+
+	mMin: æœ€å°é—´éš”
+	mMax: æœ€å¤§é—´éš”
+	mInternal: åˆå§‹å¿ƒè·³é—´éš” = mMin + (mMax-mMin)>>3
+
+#### 4.6.3 å¿ƒè·³é—´éš”æ­¥è¿›æ­¥å‡ç­–ç•¥
+
+  * æ­¥å‡æ¡ä»¶
+
+  è¶…æ—¶å›åº”ï¼šè§„å®šæ—¶é—´å†…æ²¡æœ‰æ”¶åˆ°pingå›åº”æ¶ˆæ¯
+  å¿ƒè·³å‘é€å¤±è´¥ï¼šæ— æ³•è¯»å–æœåŠ¡çš„pingå›åº”æ¶ˆæ¯ï¼Œæš‚åœå‘é€å¿ƒè·³
+
+	mMin = 180 (é‡ç½®)
+	mMax = mInternal
+	mInternal -= (mMax-mMin)>>>2
+
+  * æ­¥å¢æ¡ä»¶
+
+  å¿ƒè·³å‘é€æˆåŠŸï¼štimesOK++
+
+	++mTimesOk >= mInterval / 100 * 2
+	timesOK: å¿ƒè·³å‘é€æˆåŠŸæ•°é‡
+	mMin = mInternal
+	mInternal =+ (mMax-mMin)>>2
+
+*NOTE: ä»¥ä¸‹æ˜¯æ­¥å¢ç®—æ³•ç¤ºä¾‹ä»£ç *
+
+	public void print(){
+			int min = 180;
+			int max = 890;
+			int mInternal = 180+((max-min)>>3);
+			System.out.println("max="+max+" min="+min+" mInternal="+mInternal);
+			while(max>mInternal){
+				int step = (max-min)>>3;
+				min = mInternal;
+				mInternal += step;
+				System.out.println("step="+step+" max="+max+" min="+min+" mInternal="+mInternal+" minute = "+mInternal/60+"åˆ†");
+				if(step == 0){
+					break;
+				}
 			}
 		}
-	}
-```
-Èç¹ûÖĞ¼ä²»·¢ÉúÖĞ¶ÏÔËĞĞ¼ä¸ôÊ±¼ä½á¹ûÈçÏÂ(¾«È·µ½·ÖÖÓ)
-```
-step=88 max=890 min=268 mInternal=356 minute = 5·Ö
-step=77 max=890 min=356 mInternal=433 minute = 7·Ö
-step=66 max=890 min=433 mInternal=499 minute = 8·Ö
-step=57 max=890 min=499 mInternal=556 minute = 9·Ö
-step=48 max=890 min=556 mInternal=604 minute = 10·Ö
-step=41 max=890 min=604 mInternal=645 minute = 10·Ö
-step=35 max=890 min=645 mInternal=680 minute = 11·Ö
-step=30 max=890 min=680 mInternal=710 minute = 11·Ö
-step=26 max=890 min=710 mInternal=736 minute = 12·Ö
-step=22 max=890 min=736 mInternal=758 minute = 12·Ö
-step=19 max=890 min=758 mInternal=777 minute = 12·Ö
-step=16 max=890 min=777 mInternal=793 minute = 13·Ö
-step=14 max=890 min=793 mInternal=807 minute = 13·Ö
-step=12 max=890 min=807 mInternal=819 minute = 13·Ö
-step=10 max=890 min=819 mInternal=829 minute = 13·Ö
-step=8 max=890 min=829 mInternal=837 minute = 13·Ö
-step=7 max=890 min=837 mInternal=844 minute = 14·Ö
-step=6 max=890 min=844 mInternal=850 minute = 14·Ö
-step=5 max=890 min=850 mInternal=855 minute = 14·Ö
-step=5 max=890 min=855 mInternal=860 minute = 14·Ö
-step=4 max=890 min=860 mInternal=864 minute = 14·Ö
-step=3 max=890 min=864 mInternal=867 minute = 14·Ö
-step=3 max=890 min=867 mInternal=870 minute = 14·Ö
-step=2 max=890 min=870 mInternal=872 minute = 14·Ö
-step=2 max=890 min=872 mInternal=874 minute = 14·Ö
-step=2 max=890 min=874 mInternal=876 minute = 14·Ö
-step=2 max=890 min=876 mInternal=878 minute = 14·Ö
-step=1 max=890 min=878 mInternal=879 minute = 14·Ö
-step=1 max=890 min=879 mInternal=880 minute = 14·Ö
-step=1 max=890 min=880 mInternal=881 minute = 14·Ö
-step=1 max=890 min=881 mInternal=882 minute = 14·Ö
-step=1 max=890 min=882 mInternal=883 minute = 14·Ö
-step=1 max=890 min=883 mInternal=884 minute = 14·Ö
-step=0 max=890 min=884 mInternal=884 minute = 14·Ö
-```
+
+å¦‚æœä¸­é—´ä¸å‘ç”Ÿä¸­æ–­è¿è¡Œé—´éš”æ—¶é—´ç»“æœå¦‚ä¸‹(ç²¾ç¡®åˆ°åˆ†é’Ÿ)
+
+	step=88 max=890 min=268 mInternal=356 minute = 5åˆ†
+	step=77 max=890 min=356 mInternal=433 minute = 7åˆ†
+	step=66 max=890 min=433 mInternal=499 minute = 8åˆ†
+	step=57 max=890 min=499 mInternal=556 minute = 9åˆ†
+	step=48 max=890 min=556 mInternal=604 minute = 10åˆ†
+	step=41 max=890 min=604 mInternal=645 minute = 10åˆ†
+	step=35 max=890 min=645 mInternal=680 minute = 11åˆ†
+	step=30 max=890 min=680 mInternal=710 minute = 11åˆ†
+	step=26 max=890 min=710 mInternal=736 minute = 12åˆ†
+	step=22 max=890 min=736 mInternal=758 minute = 12åˆ†
+	step=19 max=890 min=758 mInternal=777 minute = 12åˆ†
+	step=16 max=890 min=777 mInternal=793 minute = 13åˆ†
+	step=14 max=890 min=793 mInternal=807 minute = 13åˆ†
+	step=12 max=890 min=807 mInternal=819 minute = 13åˆ†
+	step=10 max=890 min=819 mInternal=829 minute = 13åˆ†
+	step=8 max=890 min=829 mInternal=837 minute = 13åˆ†
+	step=7 max=890 min=837 mInternal=844 minute = 14åˆ†
+	step=6 max=890 min=844 mInternal=850 minute = 14åˆ†
+	step=5 max=890 min=850 mInternal=855 minute = 14åˆ†
+	step=5 max=890 min=855 mInternal=860 minute = 14åˆ†
+	step=4 max=890 min=860 mInternal=864 minute = 14åˆ†
+	step=3 max=890 min=864 mInternal=867 minute = 14åˆ†
+	step=3 max=890 min=867 mInternal=870 minute = 14åˆ†
+	step=2 max=890 min=870 mInternal=872 minute = 14åˆ†
+	step=2 max=890 min=872 mInternal=874 minute = 14åˆ†
+	step=2 max=890 min=874 mInternal=876 minute = 14åˆ†
+	step=2 max=890 min=876 mInternal=878 minute = 14åˆ†
+	step=1 max=890 min=878 mInternal=879 minute = 14åˆ†
+	step=1 max=890 min=879 mInternal=880 minute = 14åˆ†
+	step=1 max=890 min=880 mInternal=881 minute = 14åˆ†
+	step=1 max=890 min=881 mInternal=882 minute = 14åˆ†
+	step=1 max=890 min=882 mInternal=883 minute = 14åˆ†
+	step=1 max=890 min=883 mInternal=884 minute = 14åˆ†
+	step=0 max=890 min=884 mInternal=884 minute = 14åˆ†
 
 
-### 4.6.4 Ò¹¼äÄ£Ê½
-ÊÊµ±ÑÓ³¤ĞÄÌøÊ±¼ä¼ä¸ô
+
+#### 4.6.4 å¤œé—´æ¨¡å¼
+
+é€‚å½“å»¶é•¿å¿ƒè·³æ—¶é—´é—´éš”
 
 
-# ÎÊÌâ»ã×Ü
+## é—®é¢˜æ±‡æ€»
