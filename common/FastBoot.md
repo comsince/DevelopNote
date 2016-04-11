@@ -21,11 +21,11 @@ Android系统部分，目录表示为/system，通常为只读，使用Nandroid 
 用户安装的软件以及各种数据，目录为/data，使用Nandroid backup备份为data.img 
 
 ## 二 刷机的一般步骤
-### 2.1 修改开机画面, 修改的是splash1
-### 2.2 root时刷的是所有分区
-### 2.3 刷test_keys，更新的应该是recovery
-### 2.4 使用update.zip刷是更新boot、system
-### 2.5 恢复出厂设置, 清空的是userdata和cache
+* 2.1 修改开机画面, 修改的是splash1
+* 2.2 root时刷的是所有分区
+* 2.3 刷test_keys，更新的应该是recovery
+* 2.4 使用update.zip刷是更新boot、system
+* 2.5 恢复出厂设置, 清空的是userdata和cache
 
 明白这些之后就很好理解,一般无须更新recovery.IMG,正常情况下只需要更新BOOT和SYSTEM即可
 
