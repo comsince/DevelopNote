@@ -211,8 +211,10 @@ SDK开发主要让各个应用以代码集成的方式接入，在传统的开�
 ### 4.1 准备工作
 
    在客户端连接服务端之前服务器的选择问题，断线重连问题
-   * PushSDK架构设计 ![PushSDK架构设计](./images/push/PushSDK_desgin.png)
-   * Nebula消息转发流程 ![Nebula消息转发流程](./images/push/nebula_message_process.png)
+   * PushSDK架构设计 
+   ![PushSDK架构设计](../images/push/PushSDK_desgin.png)
+   * Nebula消息转发流程 
+   ![Nebula消息转发流程](../images/push/nebula_message_process.png)
 
 ### 4.2 重定向
 
