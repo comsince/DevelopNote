@@ -37,6 +37,8 @@ category: blog
 
 关于长连接实现方案，目前开源的方案大多采用netty等开源项目,当然也可以基于NIO实现长连接
 
+* [Android 保持存活率问题](http://www.oschina.net/news/72685/android-process)
+
 ## 协议定义Protobuf
 * [Google ProtoBuf](https://developers.google.com/protocol-buffers/docs/javatutorial#compiling-your-protocol-buffers)
 首先是写出proto文件，利用protobuf的自带的java生成工具生成java文件即可
@@ -47,6 +49,14 @@ category: blog
 
 ### aar包发布时将混淆文件同时发布
 这里的混淆文件是随aar包发布，需要用户apk配置的混淆文件
+
+
+## 编译工具
+### Gradle
+* [Dependencies for different build types]
+主要说明在不同编译类型下，如何动态配置依赖库，使其在不同的buildType下使用不同的依赖库
+* (1)[:	Provide configurations for flavor+type combinations](https://code.google.com/p/android/issues/detail?id=162285)
+* (2)[Gradle dependency based on both build type and flavor](http://stackoverflow.com/questions/28137853/gradle-dependency-based-on-both-build-type-and-flavor)
 
 
 ## Android API
