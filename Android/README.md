@@ -55,9 +55,9 @@ category: blog
 ### Gradle
 #### Dependencies for different build types
 主要说明在不同编译类型下，如何动态配置依赖库，使其在不同的buildType下使用不同的依赖库
-* (1)[:	Provide configurations for flavor+type combinations](https://code.google.com/p/android/issues/detail?id=162285)
+* (1)[Provide configurations for flavor+type combinations](https://code.google.com/p/android/issues/detail?id=162285)
 * (2)[Gradle dependency based on both build type and flavor](http://stackoverflow.com/questions/28137853/gradle-dependency-based-on-both-build-type-and-flavor)
-
+#### Gradle setting for publish aar
 
 ## Android API
 
