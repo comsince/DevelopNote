@@ -78,6 +78,8 @@ win 7 执行一下命令
 
 ### 5.5 Vmwware 作为独立主机获取局域网ip地址方法
 其实方法简单，只需要在设置->网络这个选项卡中的连接方式中选择“桥接网卡”，混杂模式选择“允许虚拟电脑”
+*NOTE:* 桥接模式有可能与usb共享网络发生冲突
+
 这样Vmware虚拟机就会重新获取局域网ip，作为一个独立的主机了
 [具体问题详见此](http://zhidao.baidu.com/link?url=Em-j_y9WCHw306GLsxrU22hr_sq3FIHt7CPRFPvMfrxMH5vSmJO9Oz1NLNt2rVlCOR16OOFfL9yqB0RG_LKBoa)
 
