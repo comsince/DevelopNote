@@ -5,8 +5,23 @@ category: opinion
 description: 描述五月份任务的计划以及技术点上报
 ---
 
+## 概述
+主要针对实际工作中能够作为公共解决的问题进行经验汇总
+
 ## 一. Notification 多样化展示问题
 push消息对通知栏消息的多样化提出了更高的要求，需要根据用户的需求展示多样化的通知栏
+### 1.1 开源项目介绍
+google的demo向来是比较权威的
+* [android-CustomNotifications](https://github.com/googlesamples/android-CustomNotifications)
+Define custom layouts for collapsed and expanded views.
+* [Android-Notification-Example](https://github.com/saulmm/Android-Notification-Example)
+   Simple notification.
+   Expandable notification
+   Progress notification
+   Action button notification
+* [android-BasicNotifications](https://github.com/googlesamples/android-BasicNotifications)
+
+
 
 ## 二. Notification 展示逻辑
 Notification展示需要一定的时机，这里做展示时机说明
