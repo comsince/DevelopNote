@@ -19,6 +19,21 @@ You can create a separate project for your plugin. This project produces and pub
 * [Create a Standalone Gradle plugin for Android - part 2 ](https://afterecho.uk/blog/create-a-standalone-gradle-plugin-for-android-part-2.html)
 * [Create a Standalone Gradle plugin for Android - part 3 ](https://afterecho.uk/blog/create-a-standalone-gradle-plugin-for-android-part-3.html)
 
-# android unit test
-* [sample-android-testing](https://github.com/adavis/sample-android-testing)
-  this 
+### Android Unit Test
+* Condition of Android unit test Gradle plugin
+Version 1.1 of Android Studio and the Android gradle plugin brings support for unit testing your code on your development computer
+* [Android unit test support](http://tools.android.com/tech-docs/unit-testing-support#)
+  * Good News
+    Version 1.1 of Android Studio and the Android gradle plugin brings support for unit testing your code on your development computer.
+  * Test code dependd on platform api have problem
+    The android.jar file that is used to run unit tests does not contain any actual code - that is provided by the Android system image on real devices. Instead, all methods throw exceptions (by default). This is to make sure your unit tests only test your code and do not depend on any particular behaviour of the Android platform (that you have not explicitly mocked e.g. using Mockito). If that proves problematic, you can add the snippet below to your build.gradle to change this behavior
+
+* Solution for testing code depend on Android platform api
+  * [why Android unit test so difficult](https://segmentfault.com/a/1190000002904944)
+  * [sample-android-testing](https://github.com/adavis/sample-android-testing)
+
+  * [美团技术博客-Android单元测试研究与实践](http://tech.meituan.com/Android_unit_test.html)
+  * [Android test option overview](https://github.com/codepath/android_guides/wiki/Android-Testing-Options)
+  Automated Testing is an important topic that helps us ensure quality when building Android apps. There are many different testing tools and frameworks we can use while developing Android apps. This guide will take a look at some of the more popular approaches available. For someone first starting with testing, we recommend looking at Robolectric for unit testing, Espresso for UI testing, Assertj-Android for better validation support, and Mockito for mocking.
+  * [Unit Testing with Robolectric](https://github.com/codepath/android_guides/wiki/Unit-Testing-with-Robolectric)
+  
