@@ -7,8 +7,7 @@ description: gradle for create android plugin and for unit test...
 
 ## create gradle plugin
 ### [Build script](https://github.com/adavis/caster-io-samples/tree/master/GradlePluginBasics)
-    You can include the source for the plugin directly in the build script. This has the benefit that the plugin is automatically compiled and included in the
-    classpath of the build script without you having to do anything. However, the plugin is not visible outside the build script, and so you cannot reuse the plugin
+    You can include the source for the plugin directly in the build script. This has the benefit that the plugin is automatically compiled and included in the classpath of the build script without you having to do anything. However, the plugin is not visible outside the build script, and so you cannot reuse the plugin
     outside the build script it is defined in. 
 ### [buildSrc project](https://github.com/adavis/caster-io-samples/tree/master/GradlePluginIntermediate)
     You can put the source for the plugin in the rootProjectDir/buildSrc/src/main/groovy directory. Gradle will take care of compiling and testing the plugin 
@@ -26,4 +25,4 @@ description: gradle for create android plugin and for unit test...
 
 # android unit test
 * [sample-android-testing](https://github.com/adavis/sample-android-testing)
-  this project
+  this 
