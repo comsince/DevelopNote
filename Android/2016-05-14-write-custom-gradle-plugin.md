@@ -40,4 +40,4 @@ Version 1.1 of Android Studio and the Android gradle plugin brings support for u
 
 ### write custom gradle plugin
 * [write custom plugin with task](https://www.javacodegeeks.com/2012/08/gradle-custom-plugin.html)
-  
+* [Gradle Goodness: Pass Command-line Arguments to Build Script](http://mrhaki.blogspot.com/2010/10/gradle-goodness-pass-command-line.html)  
