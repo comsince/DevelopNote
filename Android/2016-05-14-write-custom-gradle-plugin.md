@@ -36,4 +36,8 @@ Version 1.1 of Android Studio and the Android gradle plugin brings support for u
   * [Android test option overview](https://github.com/codepath/android_guides/wiki/Android-Testing-Options)
   Automated Testing is an important topic that helps us ensure quality when building Android apps. There are many different testing tools and frameworks we can use while developing Android apps. This guide will take a look at some of the more popular approaches available. For someone first starting with testing, we recommend looking at Robolectric for unit testing, Espresso for UI testing, Assertj-Android for better validation support, and Mockito for mocking.
   * [Unit Testing with Robolectric](https://github.com/codepath/android_guides/wiki/Unit-Testing-with-Robolectric)
+
+
+### write custom gradle plugin
+* [write custom plugin with task](https://www.javacodegeeks.com/2012/08/gradle-custom-plugin.html)
   
