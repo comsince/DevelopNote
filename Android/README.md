@@ -62,6 +62,11 @@ category: blog
 * (2)[Gradle dependency based on both build type and flavor](http://stackoverflow.com/questions/28137853/gradle-dependency-based-on-both-build-type-and-flavor)
 
 #### [Write Custom Gradle Plugin](./2016-05-14-write-custom-gradle-plugin.md)
+主要说明如何利用gradle plugin 技术编写plugin进行通用任务定义
+
+
+## Android Unit Test
+* 梳理现有的Android测试的现状与测试方法
 
 ## Android API
 

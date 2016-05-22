@@ -33,6 +33,10 @@ All enhanced objects in Gradle's domain model can hold extra user-defined proper
 
 * [Android Plugin Source code](https://android.googlesource.com/platform/tools/base/+/master)
 
+
+### Android plugin build lifecycle
+* [gradle plugin build lifecycle](https://docs.gradle.org/current/userguide/build_lifecycle.html)
+
 ### Android Unit Test
 * Condition of Android unit test Gradle plugin
 Version 1.1 of Android Studio and the Android gradle plugin brings support for unit testing your code on your development computer
