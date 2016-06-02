@@ -11,6 +11,8 @@ category: blog
   介绍Android 测试的两种测试，本地模拟测试和真机测试
 * [A collection of samples demonstrating different frameworks and techniques for automated testing](https://github.com/googlesamples/android-testing)
 
+* [Android Testing Support Library](https://google.github.io/android-testing-support-library/docs/index.html)
+
 ## Android Unti Test Type
 ### Local Unit Tests
   * Dependence build.gradle
