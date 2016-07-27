@@ -50,3 +50,14 @@ category: blog
 ```
 
   * run intrument test on command line
+
+
+### 同步方法测试
+
+### 异步方法测试
+ 异步方法的测试实际上是将异步的操作同步返回
+ * [mock 异步方法测试](https://hungyanbin.gitbooks.io/android-unit-test/content/chapter5.html)
+ * [Unit testing asynchronous methods with Mockito](http://fernandocejas.com/2014/04/08/unit-testing-asynchronous-methods-with-mockito/)
+
+ * [查询包依赖](https://www.versioneye.com/java/org.powermock:powermock-module-junit4/1.6.4)
+ * [Power_mocks](https://github.com/jayway/powermock/wiki/MockitoUsage#mocking-static-method)
