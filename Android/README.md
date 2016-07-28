@@ -38,6 +38,8 @@ category: blog
 关于长连接实现方案，目前开源的方案大多采用netty等开源项目,当然也可以基于NIO实现长连接
 
 * [Android 保持存活率问题](http://www.oschina.net/news/72685/android-process)
+* [Essential Netty in Action 《Netty 实战(精髓)》 ](http://www.kancloud.cn/kancloud/essential-netty-in-action/52636)
+* [Netty book](https://www.gitbook.com/book/waylau/netty-4-user-guide/details)
 
 ## 协议定义Protobuf
 * [Google ProtoBuf](https://developers.google.com/protocol-buffers/docs/javatutorial#compiling-your-protocol-buffers)
