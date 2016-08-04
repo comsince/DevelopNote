@@ -20,7 +20,6 @@ Android 自动化单元测试一直困扰着广大开发者，可以说是一种从入门到"放弃"的技术方案
 
 ## 2.2 jenkins job and plugin
 ### 2.2.1 [Remote access API](https://wiki.jenkins-ci.org/display/JENKINS/Remote+access+API)
-Remote API can be used to do things like these:
 * retrieve information from Jenkins for programmatic consumption
 * trigger a new build
 
