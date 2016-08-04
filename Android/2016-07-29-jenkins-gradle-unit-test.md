@@ -18,7 +18,7 @@ Android 自动化单元测试一直困扰着广大开发者，可以说是一种从入门到"放弃"的技术方案
 * [Securing Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Securing+Jenkins) 
 * [Basic auth 权限认证](https://wiki.jenkins-ci.org/display/JENKINS/Authenticating+scripted+clients)
 
-## 2.2 jenkins job and plugin
+## 2.2 Jenkins Job And Plugin
 ### 2.2.1 [Remote access API](https://wiki.jenkins-ci.org/display/JENKINS/Remote+access+API)
 * retrieve information from Jenkins for programmatic consumption
 * trigger a new build
@@ -27,7 +27,6 @@ Android 自动化单元测试一直困扰着广大开发者，可以说是一种从入门到"放弃"的技术方案
     curl -X POST http://username:token@jenkins.rnd.meizu.com/view
     /StandAlone/job/StandAlone_InternetPlatform_Common/build?token=common
    ```
-
 * create/copy jobs
 
 ### 2.2.2 Jenkins Aritfactory Plugin
