@@ -34,6 +34,7 @@ Android 自动化单元测试一直困扰着广大开发者，可以说是一种从入门到"放弃"的技术方案
 ### 2.2.2 Jenkins Aritfactory Plugin
 * [Artifactory Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Artifactory+Plugin)
   jenkins 良好的扩展性，有很多相关的插件供开发者使用，artifactory plugin 可以集成artifactory自定发包的功能，这里我们主要使用artifactory插件的功能默认读取管理员账户的信息调用gradle插件自动发布aar包
+
 # 三 Gradle 
 ## 2.1 Gradle Plugin
    利用gradle plugin良好的扩展性，进行基本的流程规范，目前测试的基本流程如下：
