@@ -5,20 +5,20 @@ description: jenkin api and gradle plugin for Android unit test
 category: blog
 ---
 
-## Ò». ¸ÅÊö
-Android ×Ô¶¯»¯µ¥Ôª²âÊÔÒ»Ö±À§ÈÅ×Å¹ã´ó¿ª·¢Õß£¬¿ÉÒÔËµÊÇÒ»ÖÖ´ÓÈëÃÅµ½"·ÅÆú"µÄ¼¼Êõ·½°¸£¬±¾Æ¬ÎÄÕÂ½«´ÓÏÂÃæ¼¸¸ö·½ÃæËµÃ÷ÎÒÔÚÀûÓÃ×Ô¶¯»¯¹¹½¨¹¤¾ß´Ù½øAndroid×Ô¶¯»¯²âÊÔµÄ¾­Ñé
+## ä¸€. æ¦‚è¿°
+Android è‡ªåŠ¨åŒ–å•å…ƒæµ‹è¯•ä¸€ç›´å›°æ‰°ç€å¹¿å¤§å¼€å‘è€…ï¼Œå¯ä»¥è¯´æ˜¯ä¸€ç§ä»å…¥é—¨åˆ°"æ”¾å¼ƒ"çš„æŠ€æœ¯æ–¹æ¡ˆï¼Œæœ¬ç‰‡æ–‡ç« å°†ä»ä¸‹é¢å‡ ä¸ªæ–¹é¢è¯´æ˜æˆ‘åœ¨åˆ©ç”¨è‡ªåŠ¨åŒ–æ„å»ºå·¥å…·ä¿ƒè¿›Androidè‡ªåŠ¨åŒ–æµ‹è¯•çš„ç»éªŒ
 
-* Jenkins×Ô¶¯»¯¹¹½¨
-* Gradle Plugin×Ô¶¯¹¹½¨ÈÎÎñ¹¦ÄÜ
-* Android Unit Test ²âÊÔ¸ÅÊöÓëËµÃ÷
+* Jenkinsè‡ªåŠ¨åŒ–æ„å»º
+* Gradle Pluginè‡ªåŠ¨æ„å»ºä»»åŠ¡åŠŸèƒ½
+* Android Unit Test æµ‹è¯•æ¦‚è¿°ä¸è¯´æ˜
 
-![×Ô¶¯»¯²âÊÔ¼Ü¹¹Éè¼ÆËµÃ÷](/images/android/Jenkins-Gradle-Android-Unit-Test.png)
+![è‡ªåŠ¨åŒ–æµ‹è¯•æ¶æ„è®¾è®¡è¯´æ˜](/images/android/Jenkins-Gradle-Android-Unit-Test.png)
 
-## ¶ş. Jenkins
-### 2.1 Jenkins »·¾³´î½¨
+## äºŒ. Jenkins
+### 2.1 Jenkins ç¯å¢ƒæ­å»º
 * [Jenkins Install](https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins)
 * [Securing Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Securing+Jenkins) 
-* [Basic auth È¨ÏŞÈÏÖ¤](https://wiki.jenkins-ci.org/display/JENKINS/Authenticating+scripted+clients)
+* [Basic auth æƒé™è®¤è¯](https://wiki.jenkins-ci.org/display/JENKINS/Authenticating+scripted+clients)
 
 ### 2.2 Jenkins Job And Plugin
 #### 2.2.1 [Remote access API](https://wiki.jenkins-ci.org/display/JENKINS/Remote+access+API)
@@ -33,12 +33,12 @@ Android ×Ô¶¯»¯µ¥Ôª²âÊÔÒ»Ö±À§ÈÅ×Å¹ã´ó¿ª·¢Õß£¬¿ÉÒÔËµÊÇÒ»ÖÖ´ÓÈëÃÅµ½"·ÅÆú"µÄ¼¼Êõ·½°¸
 
 #### 2.2.2 Jenkins Aritfactory Plugin
 * [Artifactory Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Artifactory+Plugin)
-  jenkins Á¼ºÃµÄÀ©Õ¹ĞÔ£¬ÓĞºÜ¶àÏà¹ØµÄ²å¼ş¹©¿ª·¢ÕßÊ¹ÓÃ£¬artifactory plugin ¿ÉÒÔ¼¯³Éartifactory×Ô¶¨·¢°üµÄ¹¦ÄÜ£¬ÕâÀïÎÒÃÇÖ÷ÒªÊ¹ÓÃartifactory²å¼şµÄ¹¦ÄÜÄ¬ÈÏ¶ÁÈ¡¹ÜÀíÔ±ÕË»§µÄĞÅÏ¢µ÷ÓÃgradle²å¼ş×Ô¶¯·¢²¼aar°ü
+  jenkins è‰¯å¥½çš„æ‰©å±•æ€§ï¼Œæœ‰å¾ˆå¤šç›¸å…³çš„æ’ä»¶ä¾›å¼€å‘è€…ä½¿ç”¨ï¼Œartifactory plugin å¯ä»¥é›†æˆartifactoryè‡ªå®šå‘åŒ…çš„åŠŸèƒ½ï¼Œè¿™é‡Œæˆ‘ä»¬ä¸»è¦ä½¿ç”¨artifactoryæ’ä»¶çš„åŠŸèƒ½é»˜è®¤è¯»å–ç®¡ç†å‘˜è´¦æˆ·çš„ä¿¡æ¯è°ƒç”¨gradleæ’ä»¶è‡ªåŠ¨å‘å¸ƒaaråŒ…
 
-## Èı Gradle 
+## ä¸‰ Gradle 
 ### 3.1 Gradle Plugin
-   ÀûÓÃgradle pluginÁ¼ºÃµÄÀ©Õ¹ĞÔ£¬½øĞĞ»ù±¾µÄÁ÷³Ì¹æ·¶£¬Ä¿Ç°²âÊÔµÄ»ù±¾Á÷³ÌÈçÏÂ£º
-   ¿ª·¢ÕßÉÏ´«´úÂë->´¥·¢jenkin×Ô¶¯»¯²âÊÔÈÎÎñ->×Ô¶¯½øĞĞ´ò°ü²âÊÔapk->µ÷ÓÃATS²âÊÔÆ½Ì¨½øĞĞµ¥Ôª²âÊÔ->ÉÏ´«²âÊÔ½á¹û->×Ô¶¯·¢²¼aar
+   åˆ©ç”¨gradle pluginè‰¯å¥½çš„æ‰©å±•æ€§ï¼Œè¿›è¡ŒåŸºæœ¬çš„æµç¨‹è§„èŒƒï¼Œç›®å‰æµ‹è¯•çš„åŸºæœ¬æµç¨‹å¦‚ä¸‹ï¼š
+   å¼€å‘è€…ä¸Šä¼ ä»£ç ->è§¦å‘jenkinè‡ªåŠ¨åŒ–æµ‹è¯•ä»»åŠ¡->è‡ªåŠ¨è¿›è¡Œæ‰“åŒ…æµ‹è¯•apk->è°ƒç”¨ATSæµ‹è¯•å¹³å°è¿›è¡Œå•å…ƒæµ‹è¯•->ä¸Šä¼ æµ‹è¯•ç»“æœ->è‡ªåŠ¨å‘å¸ƒaar
 
    
 ### 3.2 Type of Gradle Plugin
@@ -56,19 +56,21 @@ You can create a separate project for your plugin. This project produces and pub
 * [Create a Standalone Gradle plugin for Android - part 3 ](https://afterecho.uk/blog/create-a-standalone-gradle-plugin-for-android-part-3.html)
 
 
-### 3.2 ÀûÓÃgradleÊµÏÖµ¥Ôª²âÊÔ²å¼ş
-* [Platform_Gradle²å¼şÏîÄ¿](http://gitlab.meizu.com/liaojinlong/Platform_Gradle)
+### 3.2 åˆ©ç”¨gradleå®ç°å•å…ƒæµ‹è¯•æ’ä»¶
+* [Platform_Gradleæ’ä»¶é¡¹ç›®](http://gitlab.meizu.com/liaojinlong/Platform_Gradle)
 
-## ËÄ Android Test Support Library
-### 4.1 Android Test ÏÖÓĞ¼¼ÊõÖ§³Ö
+## å›› Android Test Support Library
+### 4.1 Android Test ç°æœ‰æŠ€æœ¯æ”¯æŒ
 * [Getting startedf with testing](https://developer.android.com/training/testing/start/index.html)
-  ½éÉÜAndroid ²âÊÔµÄÁ½ÖÖ²âÊÔ£¬±¾µØÄ£Äâ²âÊÔºÍÕæ»ú²âÊÔ
+  ä»‹ç»Android æµ‹è¯•çš„ä¸¤ç§æµ‹è¯•ï¼Œæœ¬åœ°æ¨¡æ‹Ÿæµ‹è¯•å’ŒçœŸæœºæµ‹è¯•
 * [A collection of samples demonstrating different frameworks and techniques for automated testing](https://github.com/googlesamples/android-testing)
 * [Android Testing Support Library](https://google.github.io/android-testing-support-library/docs/index.html)
 
-### 4.2 Android µ¥Ôª²âÊÔÀàĞÍ
-#### 4.2.1 ±¾µØµ¥Ôª²âÊÔ
+### 4.2 Android å•å…ƒæµ‹è¯•ç±»å‹
+#### 4.2.1 æœ¬åœ°å•å…ƒæµ‹è¯•
+
   * Dependence build.gradle
+
 ```
 	dependencies {
 	    // Required -- JUnit 4 framework
@@ -77,7 +79,8 @@ You can create a separate project for your plugin. This project produces and pub
 	    testCompile 'org.mockito:mockito-core:1.10.19'
 	}
 ```
-#### 4.2.2 Õæ»úÄ£Äâ²âÊÔ
+#### 4.2.2 çœŸæœºæ¨¡æ‹Ÿæµ‹è¯•
+
   * Dependence build.gradle
 
 ```
@@ -92,7 +95,9 @@ You can create a separate project for your plugin. This project produces and pub
     androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.1'
 
 ```
+
   * build.gradle defaultConfig
+
 ```
 	android {
 	    defaultConfig {
