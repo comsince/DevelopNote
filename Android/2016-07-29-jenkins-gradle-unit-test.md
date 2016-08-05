@@ -12,6 +12,8 @@ Android 自动化单元测试一直困扰着广大开发者，可以说是一种从入门到"放弃"的技术方案
 * Gradle Plugin自动构建任务功能
 * Android Unit Test 测试概述与说明
 
+![自动化测试架构设计说明](/images/android/Jenkins-Gradle-Android-Unit-Test.png)
+
 # 二. Jenkins
 ## 2.1 Jenkins 环境搭建
 * [Jenkins Install](https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins)
