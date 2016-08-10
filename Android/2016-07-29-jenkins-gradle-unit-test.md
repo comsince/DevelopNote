@@ -19,8 +19,7 @@ Android 自动化单元测试一直困扰着广大开发者，可以说是一种
 * [Jenkins Install](https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins)
 * [Jenkins Server Start](http://stackoverflow.com/questions/14869311/start-stop-and-restart-jenkins-service-on-windows)   
 * [Securing Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Securing+Jenkins) 
-为解决Jenkins下载APK权限认证问题
-* [Basic auth 权限认证](https://wiki.jenkins-ci.org/display/JENKINS/Authenticating+scripted+clients)
+* [Basic auth 权限认证](https://wiki.jenkins-ci.org/display/JENKINS/Authenticating+scripted+clients) 为解决Jenkins下载APK权限认证问题
 
 **NOTE:** Windows部署jenkins注意关闭网络防火墙，不然其他机器无法访问
 
