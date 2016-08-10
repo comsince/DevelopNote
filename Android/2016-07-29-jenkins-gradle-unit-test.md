@@ -85,6 +85,7 @@ You can create a separate project for your plugin. This project produces and pub
 ```
   ./gradlew clean uploadTestApk  
 ```
+此任务包含两种Application和Library两种构建任务，Application 任务不需要发布aar
 
 
 ## 四 Android Test Support Library
