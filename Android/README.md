@@ -34,6 +34,9 @@ category: blog
 * [Welcome to Android tcpdump](http://www.androidtcpdump.com/)
 * [TcpDump Org](http://www.tcpdump.org/#latest-release)
 
+## 功耗分析
+* [电量分析](http://hukai.me/android-performance-battery/)
+
 ## Push推送实践
 推送技术在Android的实现中一直多种变化的，归根结底都是需要客户端需要与服务端建立一种长连接，从而在需要推送消息时能够保持通道的畅通性
 
