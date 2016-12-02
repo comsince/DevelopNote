@@ -39,6 +39,12 @@ category: blog
 ## 功耗分析
 * [电量分析](http://hukai.me/android-performance-battery/)
 
+
+## 关于发布aar到Jcenter问题说明
+ * [Jcenter 发布aar，无法创建包](http://stackoverflow.com/questions/40297912/publish-my-android-aar-to-jcenter)
+ * [jcenter plugin](https://github.com/bintray/gradle-bintray-plugin#step-4-add-your-bintray-package-information-to-the-bintray-closure)
+ * [publish aar to jcenter](https://liungkejin.github.io/2016/03/27/Publish-AAR-jcenter.html)
+
 ## Push推送实践
 推送技术在Android的实现中一直多种变化的，归根结底都是需要客户端需要与服务端建立一种长连接，从而在需要推送消息时能够保持通道的畅通性
 
