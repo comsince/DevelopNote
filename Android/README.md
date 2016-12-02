@@ -33,6 +33,8 @@ category: blog
 ## 抓包工具
 * [Welcome to Android tcpdump](http://www.androidtcpdump.com/)
 * [TcpDump Org](http://www.tcpdump.org/#latest-release)
+* [Android 抓包说明](http://www.cnblogs.com/likwo/archive/2012/09/06/2673944.html)
+   具体指令如下: ```./tcpdump -i any -s 0 -v -w /sdcard/demo.cap host 112.25.243.138```
 
 ## 功耗分析
 * [电量分析](http://hukai.me/android-performance-battery/)
