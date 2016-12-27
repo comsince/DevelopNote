@@ -29,6 +29,7 @@ category: blog
 * [HttpTest](http://www.atool.org/httptest.php)
 
 * [Volley http demo](https://github.com/smanikandan14/Volley-demo)
+* [修改手机host](http://irising.me/2011/08/9691/)
 
 ## 抓包工具
 * [Welcome to Android tcpdump](http://www.androidtcpdump.com/)
@@ -38,6 +39,7 @@ category: blog
 
 ## 功耗分析
 * [电量分析](http://hukai.me/android-performance-battery/)
+
 
 
 ## 关于发布aar到Jcenter问题说明
